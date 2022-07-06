@@ -1,0 +1,63 @@
+/* ====
+0. root
+   ==== */
+:root {
+    --clr-primary: hsl(180, 54%, 48%);
+    --clr-secondary: hsl(221, 35%, 62%);
+
+    --clr-accent: hsl(50, 100%, 49%);
+    --clr-neutral: white;
+
+    --ff-primary: 'Comic Sans MS';
+    --fs-300: 0.75rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2.5rem;
+}
+
+/* =========
+1. CSS Reset
+   ========= */
+
+/* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   /* padding and border are included in the width and height */
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;    /* removes all the font weights and sizes from headings as well */
+}
+
+ul.no-list, 
+ol.no-list {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==
+
+*/
