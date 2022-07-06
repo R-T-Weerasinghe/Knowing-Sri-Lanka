@@ -58,6 +58,31 @@ svg {
   display: block;
 }
 
-/* ==
+/* ===========
+2. Main layout
+   =========== */ 
 
-*/
+div.navbar,
+div.footer {
+    height: 20vh;
+    background-color: hsl(199, 100%, 50%);
+}
+div.layout-wrapper {
+    display: flex;
+    height: 100%;
+    padding: 0 10%;
+    justify-content: center;
+    gap: 20px;
+}
+div.search-wrapper {
+    /* float: left; */
+    width: 250px;
+    height: 100%;   /* of parent */ 
+    background-color: red;
+}
+
+div.content-wrapper {
+    background-color: greenyellow;
+    width: 700px;   
+    height: 100%;
+}
