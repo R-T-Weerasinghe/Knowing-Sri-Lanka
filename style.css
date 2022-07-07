@@ -10,14 +10,16 @@
   --clr-accent: hsl(50, 100%, 49%);
   --clr-neutral: white;
 
-  --ff-primary: 'Comic Sans MS';
+  --ff-primary: 'Open Sans', sans-serif;
   --fs-300: 0.75rem;
-  --fs-400: 1.25rem;
+  --fs-400: 0.875rem; /* 14px */
   --fs-500: 1.75rem;
   --fs-600: 2.5rem;
+  
 }
 body {
   background-color:lightsalmon;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* =========
@@ -83,7 +85,7 @@ div.layout-wrapper {
 div.search-wrapper {
     width: 100%;
     /* height: 100%;   of parent  */
-    background-color: red;
+    background-color: var(--clr-neutral);
 }
 
 div.content-wrapper {
@@ -142,11 +144,147 @@ div.grid-tile:nth-child(even) {
 
 div.grid-tile { width: 100%; }
 
+/* =================
+5. Search Aesthetics
+   ================= */
+div.search-wrapper {
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+}
+div.tog-content {
+  padding: 0 10px;
+}
 
+label.tog-lbl {
+  background-color:var(--clr-primary);
+  color: var(--clr-neutral);
+  padding: 3px;
+  border-radius: 3px;
+  /* box-sizing: border-box; */
+
+  font-size: var(--fs-400);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.search-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.search-row > div {
+  padding: 8px; 
+}
+
+div.search-row h5 {
+  font-size: var(--fs-400);
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+div.search-row input[type="text"] {
+  padding: 6px 12px;
+  border: 1px solid var(--clr-primary);
+  width: 100%;
+  color: var(--clr-secondary);
+}
+
+input.search-text::placeholder {
+  color: var(--clr-secondary);
+}
+div.flex { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.search-col {
+  width: 100%;
+}
+div.search-col > div {
+  padding: 5px 0;
+}
+div.search-row input[type="checkbox"] {
+  /* width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-top: -3px; */
+  visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+/* div.search-row input[type="checkbox"] + span {
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--clr-primary);
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+} */
+div.search-row input[type="checkbox"]:checked + label::before {/* <-- Style its checked state */
+  background: var(--clr-primary);
+}
+div.search-row input[type="checkbox"] + label::before {   /* select neighbour */
+  content: '';
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--clr-primary);
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 10px;
+}
+
+label.check {
+  font-size: var(--fs-400);
+  cursor: pointer;
+}
+
+select.select {
+  padding: 6px 12px;
+  border: 1px solid var(--clr-primary) ;
+  width: 100%;
+}
+
+div.search-row > div.btn {
+  display: flex;
+  justify-content: center;
+}
+div.btn > input.btn {
+  width: 180px;
+  border: 0px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+hr{
+  height: 2px;
+  background-color: var(--clr-primary);
+  border: none;
+}
 /* =============
 x. media queries
    ============= */
-
+@media screen and (min-width: 480px) {
+  div.search-row input[type="checkbox"] + label::before {
+    width: 28px;
+    height: 28px;
+  }
+  /* div.search-col {
+    width: 50%;
+  } */
+  div.flex { 
+    flex-wrap: nowrap;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 769px) {
 
   img.grid-image {
@@ -195,7 +333,7 @@ x. media queries
   }
 
   div.search-wrapper {
-    width: 250px;
+    width: 300px;
   }
 
   div.content-wrapper {
