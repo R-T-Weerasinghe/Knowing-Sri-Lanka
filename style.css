@@ -255,7 +255,7 @@ div.search-row > div.btn {
 }
 div.btn > input.btn {
   width: 180px;
-  border: 0px;
+  border: 3px solid var(--clr-neutral);
   border-radius: 100px;
   text-transform: uppercase;
   padding: 10px;
@@ -263,6 +263,14 @@ div.btn > input.btn {
   color: var(--clr-neutral);
   letter-spacing: 1.5px;
   font-weight: 700;
+}
+
+div.btn > input.btn:hover,
+div.btn > input.btn:focus {
+  background-color: var(--clr-accent);
+  border: 3px solid var(--clr-primary);
+  color: var(--clr-primary);
+  cursor: pointer
 }
 
 hr{
