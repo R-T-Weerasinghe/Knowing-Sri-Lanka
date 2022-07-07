@@ -1,3 +1,5 @@
+/* NOTE : Site is designed for mobile and changed accordingly using media queries */
+
 /* ====
 0. root
    ==== */
@@ -59,7 +61,7 @@ svg {
 }
 
 /* ===========
-2. Main layout
+2. Main layout (mobile)
    =========== */ 
 
 div.navbar,
@@ -69,20 +71,71 @@ div.footer {
 }
 div.layout-wrapper {
     display: flex;
-    height: 100%;
+    flex-wrap: wrap;
+    /* height: 100%; */
     padding: 0 10%;
     justify-content: center;
     gap: 20px;
 }
 div.search-wrapper {
-    /* float: left; */
-    width: 250px;
+    width: 100%;
     height: 100%;   /* of parent */ 
     background-color: red;
 }
 
 div.content-wrapper {
     background-color: greenyellow;
-    width: 700px;   
+    width: 100%;   
     height: 100%;
+}
+
+.tog-check { display: none; }
+
+.tog-content {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.tog-check:checked + .tog-content {
+  max-height: 100vh; /* any insanely large number if a lot of contents */
+  opacity: 1;
+  visibility: visible;
+}
+
+.tog-lbl {
+  display: inline-block; 
+  width: 100%;
+  cursor: pointer;
+ }
+/* @media screen and (max-width: 989px) {
+  .tog-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+} */
+@media screen and (min-width: 990px) {
+  .tog-content {
+    visibility: visible;
+    max-height: 100vh;
+    opacity: 1;
+  }
+
+  .tog-lbl { cursor:default; }
+
+  div.layout-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  div.search-wrapper {
+    width: 250px;
+  }
+
+  div.content-wrapper {
+    width: 700px;
+  }
 }
