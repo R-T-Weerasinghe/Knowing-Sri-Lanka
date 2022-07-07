@@ -24,6 +24,118 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium dolores modi, accusamus
                     nulla suscipit dolore rerum iste hic nam saepe repudiandae labore molestiae ducimus debitis
                     aspernatur fugit distinctio architecto!</p>
+                    <form class="search-form">
+                        <div class="search-row">
+                            <div><h5>Keyword Search:</h5></div>
+                            <div><input type="text" name="keyword" id="keyword" placeholder="Enter keyword"></div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Choose your type of vacation:</h5></div>
+                            <div>
+                                <div class="search-col">
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-culture" value="culture">
+                                        <label for="check-culture">Culture</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-nature" value="nature">
+                                        <label for="check-nature">Nature</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-beach" value="beach">
+                                        <label for="check-beach">Beach</label>
+                                    </div>
+                                </div>
+                                <div class="search-col">
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-classes" value="classes">
+                                        <label for="check-classes">Classes</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-religion" value="religion">
+                                        <label for="check-religion">Religion</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-event" value="event">
+                                        <label for="check-event">Event</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" name="vacation-type" id="check-sport" value="sport">
+                                        <label for="check-sport">Sport</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Duration:</h5></div>
+                            <div>Slider yet to be implemented</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Service level:</h5></div>
+                            <div>
+                                <div>
+                                    <input type="checkbox" name="service-level" id="check-standard" value="standard">
+                                    <label for="check-standard">Standard</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" name="service-level" id="check-upgraded" value="upgraded">
+                                    <label for="check-upgraded">Upgraded</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="service-level" id="check-personalized" value="personalized">
+                                    <label for="check-personalized">Personalized</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Phyiscal Activity Level</h5></div>
+                            <div>Slider yet to be implemented</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Destination Country:</h5></div>
+                            <div>
+                                <select name="country">
+                                    <option value="cuba">Cuba</option>
+                                    <option value="multi">Multi Destination</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <div><h5>Price:</h5></div>
+                            <div>Slider yet to be implemented</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="search-row">
+                            <input type="button" class="btn" value="Search" onclick="search_function()">
+                        </div>
+                    </form>
             </div>
         </div>
 
