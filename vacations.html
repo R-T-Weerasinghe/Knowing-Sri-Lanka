@@ -9,10 +9,14 @@
     <title>Cuba Vacation & Travel Packages | Knowing Cuba</title>
 
     <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap"
         rel="stylesheet">
+    <!-- google material icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -22,7 +26,16 @@
 
     <div class="layout-wrapper">
         <div class="float-child search-wrapper">
-            <label for="search-toggle" class="tog-lbl">Customize Your Search</label>
+
+            <div class="tog-lbl">
+                <label for="search-toggle" class="tog-lbl">
+                    Customize Your Search
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </label>
+            </div>
+
             <input type="checkbox" class="tog-check" id="search-toggle">
             <div class="tog-content">
                 <form class="search-form">
@@ -30,7 +43,8 @@
                         <div>
                             <h5>Keyword Search:</h5>
                         </div>
-                        <div><input type="text" class="search-text" name="keyword" id="keyword" placeholder="Enter keyword"></div>
+                        <div><input type="text" class="search-text" name="keyword" id="keyword"
+                                placeholder="Enter keyword"></div>
                     </div>
 
                     <hr>
@@ -158,12 +172,28 @@
         </div>
 
         <div class="float-child content-wrapper">
+            <div class="content-header">
+                <h1>Cuba vacation and travel packages</h1>
+                <strong>8 results found</strong>
+            </div>
             <div class="grid-wrapper">
 
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo1.jpg" alt="dummy-image">
+                        <div class="grid-featured">Featured</div>
+                        <div class="grid-details">testing one two three</div>
+                    </div>
+                    <div class="grid-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
+                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
+                        ducimus quidem id accusantium ullam harum!
+                    </div>
+                </div>
+                <div class="grid-tile">
+                    <div class="grid-image">
+                        <img class="grid-image" src="./images/demo2.jpg" alt="dummy-image">
+                        <div class="grid-featured">Featured</div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -174,8 +204,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo3.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -186,8 +216,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo4.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -198,8 +228,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo5.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -210,8 +240,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo6.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -222,8 +252,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo7.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">
@@ -234,20 +264,8 @@
                 </div>
                 <div class="grid-tile">
                     <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
-                        <div class="grid-details"></div>
-                    </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
-                    </div>
-                </div>
-                <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/dummy-image.png" alt="dummy-image">
-                        <div class="grid-featured"></div>
+                        <img class="grid-image" src="./images/demo8.jpg" alt="dummy-image">
+                        <div class="grid-featured hidden"></div>
                         <div class="grid-details"></div>
                     </div>
                     <div class="grid-content">

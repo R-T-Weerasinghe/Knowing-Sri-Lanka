@@ -1,8 +1,8 @@
 /* NOTE : Site is designed for mobile and changed accordingly using media queries */
 
-/* ====
+/* ===========================================================================
 0. root
-   ==== */
+   ============================================================================ */
 :root {
   --clr-primary: hsl(180, 54%, 48%);
   --clr-secondary: hsl(221, 35%, 62%);
@@ -11,9 +11,9 @@
   --clr-neutral: white;
 
   --ff-primary: 'Open Sans', sans-serif;
-  --fs-300: 0.75rem;
+  --fs-300: 0.75rem;  /* 12px */
   --fs-400: 0.875rem; /* 14px */
-  --fs-500: 1.75rem;
+  --fs-500: 1.75rem;  /* 28px */
   --fs-600: 2.5rem;
   
 }
@@ -22,9 +22,9 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* =========
+/* ===================================================================
 1. CSS Reset
-   ========= */
+   ==================================================================== */
 
 /* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
 
@@ -65,9 +65,9 @@ svg {
   display: block;
 }
 
-/* ====================
+/* ================================================================
 2. Main layout (mobile)
-   ==================== */ 
+   ================================================================ */ 
 
 div.navbar,
 div.footer {
@@ -85,18 +85,16 @@ div.layout-wrapper {
 div.search-wrapper {
     width: 100%;
     /* height: 100%;   of parent  */
-    background-color: var(--clr-neutral);
 }
 
 div.content-wrapper {
-    background-color:springgreen;
     width: 100%;   
     /* height: 100%; */
 }
 
-/* =====================
+/* ==============================================================
 3. Search content toggle
-   ===================== */
+   ============================================================== */
 
 .tog-check { display: none; }
 
@@ -121,51 +119,81 @@ div.content-wrapper {
   cursor: pointer;
  }
 
-/* ===========
+/* ===============================================================
 4. Grid layout
-   =========== */
+   =============================================================== */
 
 div.grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 20px;
 
-  padding: 10px; 
+  padding: 10px 0; 
 }
 
-div.grid-tile:nth-child(odd) {
+/* div.grid-tile:nth-child(odd) {
   color: white;
   background-color: black;
-}
-div.grid-tile:nth-child(even) {
+} */
+div.grid-tile:nth-child(n) {
   color: black;
   background-color: white;
 }
 
-div.grid-tile { width: 100%; }
+div.grid-tile { 
+  width: 100%;
+}
+div.grid-image {
+  position: relative;
+}
+div.grid-featured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+}
+div.hidden {
+  visibility: hidden;
+}
+div.grid-details {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 5px;
+}
 
-/* =================
+/* ===============================================================
 5. Search Aesthetics
-   ================= */
+   =============================================================== */
 div.search-wrapper {
+  background-color: var(--clr-neutral);
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
 }
 div.tog-content {
   padding: 0 10px;
 }
-
-label.tog-lbl {
+div.tog-lbl {
+  position: relative;
   background-color:var(--clr-primary);
-  color: var(--clr-neutral);
   padding: 3px;
   border-radius: 3px;
+}
+
+label.tog-lbl {
+  color: var(--clr-neutral);
+  background-color: transparent;
   /* box-sizing: border-box; */
 
   font-size: var(--fs-400);
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+}
+label.tog-lbl > span.material-symbols-outlined {
+  position: absolute;
+  right: 5px;
+  font-weight: 700;
 }
 
 div.search-row {
@@ -205,10 +233,6 @@ div.search-col > div {
   padding: 5px 0;
 }
 div.search-row input[type="checkbox"] {
-  /* width: 22px;
-  height: 22px;
-  vertical-align: middle;
-  margin-top: -3px; */
   visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
   display: block;
   height: 0;
@@ -216,14 +240,6 @@ div.search-row input[type="checkbox"] {
   position: absolute;
   overflow: hidden;
 }
-/* div.search-row input[type="checkbox"] + span {
-  height: 22px;
-  width: 22px;
-  border: 1px solid var(--clr-primary);
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -3px;
-} */
 div.search-row input[type="checkbox"]:checked + label::before {/* <-- Style its checked state */
   background: var(--clr-primary);
 }
@@ -278,6 +294,38 @@ hr{
   background-color: var(--clr-primary);
   border: none;
 }
+/* ============================================================================
+6. Content aesthetics
+   ============================================================================ */
+
+div.content-wrapper {
+  background-color: var(--clr-neutral);
+}
+
+div.content-header > h1 {
+  text-transform: uppercase;
+  font-size: var(--fs-500);
+  color: var(--clr-primary);
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+div.grid-tile {
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+}
+div.grid-featured {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral);
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px #888;   /* h-offeset v-offset blur spread colour */
+}
+
+
+div.grid-details {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+}
+
 /* =============
 x. media queries
    ============= */
@@ -360,6 +408,21 @@ x. media queries
     width: 343px;
     height: 488px;
   }
+
+  label.tog-lbl > span.material-symbols-outlined {
+    visibility: hidden;
+  }
 }
 
+/* =========================================================
+z. Google icons
+   ========================================================= */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
