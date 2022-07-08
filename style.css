@@ -148,6 +148,11 @@ div.grid-tile {
 div.grid-image {
   position: relative;
 }
+img.grid-image {
+  width: auto;
+  max-height: 215px;
+  margin: auto;
+}
 div.grid-featured {
   position: absolute;
   top: 0;
@@ -396,12 +401,16 @@ x. media queries
   div.flex { 
     flex-wrap: nowrap;
   }
+  img.grid-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 769px) {
 
   img.grid-image {
-    width: 440px;
-    height: 294px;
+    width: auto;
+    max-height: 215px;
     margin: auto;
   }
 }
@@ -420,8 +429,8 @@ x. media queries
   }
 
   img.grid-image {
-    width: 340px;
-    height: 220px;
+    width: 343px;
+    height: 215px;
     margin: auto;
   }
 
