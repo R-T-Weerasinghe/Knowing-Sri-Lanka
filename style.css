@@ -76,7 +76,7 @@ div.footer {
     height: 20vh;
     background-color: hsl(199, 100%, 50%);
 }
-div.layout-wrapper {
+div.main-container {
     display: flex;
     flex-wrap: wrap;
     /* height: 100%; */
@@ -84,12 +84,12 @@ div.layout-wrapper {
     justify-content: center;
     gap: 20px;
 }
-div.search-wrapper {
+div.search-container {
     width: 100%;
     /* height: 100%;   of parent  */
 }
 
-div.content-wrapper {
+div.content-main-container {
     width: 100%;   
     /* height: 100%; */
 }
@@ -125,7 +125,7 @@ div.content-wrapper {
 4. Grid layout
    =============================================================== */
 
-div.grid-wrapper {
+div.content-grid-tiles-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -146,15 +146,15 @@ div.grid-tile {
   width: 100%;
   height: 488px;
 }
-div.grid-image {
+div.tile-image-container {
   position: relative;
 }
-img.grid-image {
+img.tile-image {
   width: auto;
   max-height: 215px;
   margin: auto;
 }
-div.grid-featured {
+div.tile-image-featured {
   position: absolute;
   top: 0;
   left: 0;
@@ -163,7 +163,7 @@ div.grid-featured {
 div.hidden {
   visibility: hidden;
 }
-div.grid-details {
+div.tile-image-details-container {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -173,11 +173,19 @@ div.grid-details {
 /* ===============================================================
 5. Search Aesthetics
    =============================================================== */
-div.search-wrapper {
+div.search-container {
   background-color: var(--clr-neutral);
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
+  margin: 10px 0;
 }
+/* div.search-container-border {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--clr-neutral);
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+} */
 div.tog-content {
   padding: 0 10px;
 }
@@ -204,22 +212,22 @@ label.tog-lbl > span.material-symbols-outlined {
   font-weight: 700;
 }
 
-div.search-row {
+div.search-form-row {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-div.search-row > div {
+div.search-form-row > div {
   padding: 8px; 
 }
 
-div.search-row h5 {
+div.search-form-row h5 {
   font-size: var(--fs-400);
   font-weight: 700;
   color: var(--clr-primary);
 }
 
-div.search-row input[type="text"] {
+input.search-text {
   padding: 6px 12px;
   border: 1px solid var(--clr-primary);
   width: 100%;
@@ -229,18 +237,19 @@ div.search-row input[type="text"] {
 input.search-text::placeholder {
   color: var(--clr-secondary);
 }
-div.flex { 
+div.flex {    /* to contain vacation type cols */
   display: flex;
   flex-wrap: wrap;
 }
 
-div.search-col {
+div.search-row-col {
   width: 100%;
 }
-div.search-col > div {
+div.search-row-col > div {
   padding: 5px 0;
 }
-div.search-row input[type="checkbox"] {
+
+input.search-checkbox {
   visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
   display: block;
   height: 0;
@@ -248,10 +257,7 @@ div.search-row input[type="checkbox"] {
   position: absolute;
   overflow: hidden;
 }
-div.search-row input[type="checkbox"]:checked + label::before {/* <-- Style its checked state */
-  background: var(--clr-primary);
-}
-div.search-row input[type="checkbox"] + label::before {   /* select neighbour */
+input.search-checkbox + label.check::before {   /* select neighbour */
   content: '';
   height: 22px;
   width: 22px;
@@ -261,7 +267,9 @@ div.search-row input[type="checkbox"] + label::before {   /* select neighbour */
   margin-top: -3px;
   margin-right: 10px;
 }
-
+input.search-checkbox:checked + label.check::before {/* <-- Style its checked state */
+  background: var(--clr-primary);
+}
 label.check {
   font-size: var(--fs-400);
   cursor: pointer;
@@ -273,11 +281,11 @@ select.select {
   width: 100%;
 }
 
-div.btn {
+div.btn-wrapper {
   display: flex;
   justify-content: center;
 }
-div.btn > input.search-btn {
+div.btn-wrapper > input.search-btn {
   width: 180px;
   border: 3px solid var(--clr-primary);
   border-radius: 100px;
@@ -293,8 +301,8 @@ div.btn > input.search-btn {
   transition-timing-function: linear;
 }
 
-div.btn > input.search-btn:hover,
-div.btn > input.search-btn:focus {
+div.btn-wrapper > input.search-btn:hover,
+div.btn-wrapper > input.search-btn:focus {
   background-color: var(--clr-accent);
   border: 3px solid var(--clr-accent);
   color: var(--clr-neutral);
@@ -310,7 +318,10 @@ hr {
 6. Content aesthetics
    ============================================================================ */
 
-div.content-wrapper {
+div.main-container {
+  padding: 0 15px;
+}
+div.content-main-container {
   background-color: var(--clr-neutral);
 }
 
@@ -325,31 +336,34 @@ div.grid-tile {
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
 }
-div.grid-featured {
+div.tile-image-featured {
   background-color: var(--clr-accent);
   color: var(--clr-neutral);
   padding-bottom: 5px;
   padding-right: 10px;
+  padding-left: 10px;
   border-radius: 3px 0 10px;   /* top-left | top-right & bottom-left | bottom-right */
+  letter-spacing: 1.2px;
+  font-weight: 500;
   /*box-shadow: 3px 3px 5px #888; */   /* h-offeset v-offset blur spread colour */
 }
-div.grid-featured > span.material-symbols-outlined {
+div.tile-image-featured > span.material-symbols-outlined {
   vertical-align: bottom;
   font-size: 24px;
 }
 
-div.grid-details {
+div.tile-image-details-container {
   background-color: var(--clr-primary);
   color: var(--clr-neutral);
 }
-div.grid-details-section {
+div.tile-image-details-section {
   display: inline-block;
   padding-left: 10px;
 }
-div.grid-details-section > span.material-symbols-outlined {
+div.tile-image-details-section > span.material-symbols-outlined {
   vertical-align: bottom;
 }
-div.grid-content {
+div.tile-content-container {
   padding: 5px 15px;
   height: 273px;
   position: relative;
@@ -361,13 +375,13 @@ h3.grid-content-header {
   color: var(--clr-primary);
   font-weight: 700;
 }
-div.grid-content p {
+div.tile-content-container p {
   font-size: var(--fs-400);
   color: var(--clr-secondary);
   font-weight: 600;
   padding-top: 10px;
 }
-div.grid-content h5 {
+div.tile-content-container h5 {
   font-size: var(--fs-400);
   font-weight: 700;
   color: var(--clr-primary);
@@ -413,23 +427,20 @@ div.details-btn {
   display: flex;
   align-items: center;
 }
-
-div.grid-content-section-1 {
-  height: 106px;
+div.tile-content-section-1,
+div.tile-content-section-2,
+div.tile-content-section-3 {
   overflow: hidden;
 }
-div.grid-content-section-2 {
-  height: 90px;
-  overflow: hidden;
-}
-div.grid-content-section-3 {
+div.tile-content-section-1 { height: 106px; }
+div.tile-content-section-2 { height: 90px; }
+div.tile-content-section-3 {
+  height: 73px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 73px;
-  overflow: hidden;
-
+  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -438,44 +449,44 @@ div.grid-content-section-3 {
 x. media queries
    ============= */
 @media screen and (min-width: 480px) {
-  div.search-row input[type="checkbox"] + label::before {
+  input.search-checkbox + label.check::before {
     width: 28px;
     height: 28px;
   }
-  /* div.search-col {
+  /* div.search-row-col {
     width: 50%;
   } */
   div.flex { 
     flex-wrap: nowrap;
   }
-  img.grid-image {
+  img.tile-image {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
 
-  img.grid-image {
+  img.tile-image {
     width: auto;
     max-height: 215px;
     margin: auto;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 989px) {
+@media screen and (min-width: 768px) and (max-width: 999px) {
 
-  div.search-wrapper {
+  div.search-container {
     width: 720px;
   }
 
-  div.content-wrapper {
+  div.content-main-container {
     width: 720px;
   }
-  div.grid-wrapper {
+  div.content-grid-tiles-container {
     grid-template-columns: 1fr 1fr; 
   }
 
-  img.grid-image {
+  img.tile-image {
     width: 343px;
     height: 215px;
     margin: auto;
@@ -487,7 +498,7 @@ x. media queries
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1000px) {
   .tog-content {
     visibility: visible;
     max-height: 100vh;
@@ -496,21 +507,21 @@ x. media queries
 
   .tog-lbl { cursor:default; }
 
-  div.layout-wrapper {
+  div.main-container {
     flex-wrap: nowrap;
   }
 
-  div.search-wrapper {
+  div.search-container {
     width: 300px;
   }
 
-  div.content-wrapper {
+  div.content-main-container {
     width: 720px;
   }
 
-  div.grid-wrapper { grid-template-columns: 1fr 1fr; }
+  div.content-grid-tiles-container { grid-template-columns: 1fr 1fr; }
 
-  img.grid-image {
+  img.tile-image {
     width: 343px;
     height: 215px;
     margin: auto;

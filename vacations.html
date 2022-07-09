@@ -24,8 +24,8 @@
         <div class="navbar"></div>
     </header>
 
-    <div class="layout-wrapper">
-        <div class="float-child search-wrapper">
+    <div class="main-container">
+        <div class="search-container">
 
             <div class="tog-lbl">
                 <label for="search-toggle" class="tog-lbl">
@@ -37,57 +37,66 @@
             </div>
 
             <input type="checkbox" class="tog-check" id="search-toggle">
-            <div class="tog-content">
+            <div class="tog-content search-form-wrapper">
                 <form class="search-form">
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Keyword Search:</h5>
                         </div>
-                        <div><input type="text" class="search-text" name="keyword" id="keyword"
-                                placeholder="Enter keyword"></div>
+                        <div>
+                            <input type="text" class="search-text" name="keyword" id="keyword"
+                                placeholder="Enter keyword">
+                        </div>
                     </div>
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Choose your type of vacation:</h5>
                         </div>
                         <div class="flex">
-                            <div class="search-col">
+                            <div class="search-row-col">
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-culture" value="culture">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type"
+                                        id="check-culture" value="culture">
                                     <label class="check" for="check-culture">Culture</label>
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-nature" value="nature">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type"
+                                        id="check-nature" value="nature">
                                     <label class="check" for="check-nature">Nature</label>
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-beach" value="beach">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type" id="check-beach"
+                                        value="beach">
                                     <label class="check" for="check-beach">Beach</label>
                                 </div>
                             </div>
-                            <div class="search-col">
+                            <div class="search-row-col">
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-classes" value="classes">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type"
+                                        id="check-classes" value="classes">
                                     <label class="check" for="check-classes">Classes</label>
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-religion" value="religion">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type"
+                                        id="check-religion" value="religion">
                                     <label class="check" for="check-religion">Religion</label>
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-event" value="event">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type" id="check-event"
+                                        value="event">
                                     <label class="check" for="check-event">Event</label>
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="vacation-type" id="check-sport" value="sport">
+                                    <input class="search-checkbox" type="checkbox" name="vacation-type" id="check-sport"
+                                        value="sport">
                                     <label class="check" for="check-sport">Sport</label>
                                 </div>
                             </div>
@@ -96,7 +105,7 @@
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Duration:</h5>
                         </div>
@@ -105,24 +114,26 @@
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Service level:</h5>
                         </div>
-                        <div class="search-col">
+                        <div class="search-row-col">
                             <div>
-                                <input type="checkbox" name="service-level" id="check-standard" value="standard">
+                                <input class="search-checkbox" type="checkbox" name="service-level" id="check-standard"
+                                    value="standard">
                                 <label class="check" for="check-standard">Standard</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" name="service-level" id="check-upgraded" value="upgraded">
+                                <input class="search-checkbox" type="checkbox" name="service-level" id="check-upgraded"
+                                    value="upgraded">
                                 <label class="check" for="check-upgraded">Upgraded</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" name="service-level" id="check-personalized"
-                                    value="personalized">
+                                <input class="search-checkbox" type="checkbox" name="service-level"
+                                    id="check-personalized" value="personalized">
                                 <label class="check" for="check-personalized">Personalized</label>
                             </div>
                         </div>
@@ -130,7 +141,7 @@
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Phyiscal activity level:</h5>
                         </div>
@@ -139,7 +150,7 @@
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Destination country:</h5>
                         </div>
@@ -153,7 +164,7 @@
 
                     <hr>
 
-                    <div class="search-row">
+                    <div class="search-form-row">
                         <div>
                             <h5>Price:</h5>
                         </div>
@@ -162,45 +173,47 @@
 
                     <hr>
 
-                    <div class="search-row">
-                        <div class="btn">
+                    <div class="search-form-row">
+                        <div class="btn-wrapper">
                             <input type="button" class="search-btn" value="Search" onclick="search_function()">
                         </div>
                     </div>
                 </form>
             </div>
+
+
         </div>
 
-        <div class="float-child content-wrapper">
+        <div class="content-main-container">
             <div class="content-header">
                 <h1>Cuba vacation and travel packages</h1>
                 <strong>8 results found</strong>
             </div>
-            <div class="grid-wrapper">
+            <div class="content-grid-tiles-container">
                 <!-- tile 1 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo1.jpg" alt="dummy-image">
-                        <div class="grid-featured">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo1.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
                             Popular
                             <!-- <span class="material-symbols-outlined">
                                 favorite
                             </span> -->
                         </div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -208,13 +221,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        <div class="grid-content-section-1">
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
                             <h3 class="grid-content-header">Havana special</h3>
                             <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
                         </div>
-                        <hr class="grid-content-section-hr">
-                        <div class="grid-content-row grid-content-section-2">
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
                             <h5>Sites included:</h5>
                             <ul>
                                 <li>Havana</li>
@@ -224,8 +237,8 @@
                                 <li>B</li>
                             </ul>
                         </div>
-                        <hr class="grid-content-section-hr">
-                        <div class="grid-content-row grid-content-section-3">
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
                             <input type="button" value="Details" class="details-btn">
                         </div>
 
@@ -233,23 +246,28 @@
                 </div>
                 <!-- tile 2 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo2.jpg" alt="dummy-image">
-                        <div class="grid-featured">Featured</div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo2.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -257,31 +275,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 3 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo3.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo3.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -289,31 +329,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 4 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo4.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo4.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -321,31 +383,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 5 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo5.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo5.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -353,31 +437,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 6 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo6.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo6.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -385,31 +491,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 7 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo7.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo7.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -417,31 +545,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
                 <!-- tile 8 -->
                 <div class="grid-tile">
-                    <div class="grid-image">
-                        <img class="grid-image" src="./images/demo8.jpg" alt="dummy-image">
-                        <div class="grid-featured hidden"></div>
-                        <div class="grid-details">
-                            <div class="grid-details-section">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo8.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     paid
                                 </span>
                                 from $575
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     light_mode
                                 </span>
                                 4 Days
                             </div>
-                            <div class="grid-details-section">
+                            <div class="tile-image-details-section">
                                 <span class="material-symbols-outlined">
                                     dark_mode
                                 </span>
@@ -449,10 +599,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam recusandae quod
-                        perferendis repellendus, eum ipsam soluta hic cupiditate ducimus. Sequi quas dignissimos culpa,
-                        ducimus quidem id accusantium ullam harum!
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn">
+                        </div>
+
                     </div>
                 </div>
             </div>
