@@ -7,7 +7,8 @@
   --clr-primary: hsl(180, 54%, 48%);
   --clr-secondary: hsl(221, 35%, 62%);
 
-  --clr-accent: hsl(50, 100%, 49%);
+  /* --clr-accent: hsl(50, 100%, 49%); */
+  --clr-accent: hsl(11, 96%, 55%);
   --clr-neutral: white;
 
   --ff-primary: 'Open Sans', sans-serif;
@@ -278,7 +279,7 @@ div.btn {
 }
 div.btn > input.search-btn {
   width: 180px;
-  border: 3px solid var(--clr-neutral);
+  border: 3px solid var(--clr-primary);
   border-radius: 100px;
   text-transform: uppercase;
   padding: 10px;
@@ -286,17 +287,21 @@ div.btn > input.search-btn {
   color: var(--clr-neutral);
   letter-spacing: 1.5px;
   font-weight: 700;
+
+  transition-property: background-color, border, color;
+  transition-duration: 0.05s;
+  transition-timing-function: linear;
 }
 
 div.btn > input.search-btn:hover,
 div.btn > input.search-btn:focus {
   background-color: var(--clr-accent);
-  border: 3px solid var(--clr-primary);
-  color: var(--clr-primary);
+  border: 3px solid var(--clr-accent);
+  color: var(--clr-neutral);
   cursor: pointer
 }
 
-hr{
+hr {
   height: 2px;
   background-color: var(--clr-primary);
   border: none;
@@ -323,10 +328,15 @@ div.grid-tile {
 div.grid-featured {
   background-color: var(--clr-accent);
   color: var(--clr-neutral);
-  border-radius: 3px;
-  box-shadow: 3px 3px 5px #888;   /* h-offeset v-offset blur spread colour */
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-radius: 3px 0 10px;   /* top-left | top-right & bottom-left | bottom-right */
+  /*box-shadow: 3px 3px 5px #888; */   /* h-offeset v-offset blur spread colour */
 }
-
+div.grid-featured > span.material-symbols-outlined {
+  vertical-align: bottom;
+  font-size: 24px;
+}
 
 div.grid-details {
   background-color: var(--clr-primary);
@@ -341,6 +351,8 @@ div.grid-details-section > span.material-symbols-outlined {
 }
 div.grid-content {
   padding: 5px 15px;
+  height: 273px;
+  position: relative;
 }
 h3.grid-content-header {
   font-size: 1rem;
@@ -349,11 +361,11 @@ h3.grid-content-header {
   color: var(--clr-primary);
   font-weight: 700;
 }
-div.grid-content > p, li {
+div.grid-content p {
   font-size: var(--fs-400);
   color: var(--clr-secondary);
   font-weight: 600;
-  padding: 10px 0 20px;
+  padding-top: 10px;
 }
 div.grid-content h5 {
   font-size: var(--fs-400);
@@ -364,11 +376,15 @@ div.grid-content-row {
   padding: 10px 0;
 }
 div.grid-content-row > ul {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  color: var(--clr-secondary);
+  font-weight: 600;
   background-color: white;
   padding: 0 10px;
-  height: 40px;
+  height: 60px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   list-style-position: inside;
 }
@@ -381,12 +397,43 @@ input.details-btn {
   color: var(--clr-neutral);
   letter-spacing: 1.5px;
   font-weight: 700;
+
+  transition-property: background-color, border, color;
+  transition-duration: 0.05s;
+  transition-timing-function: linear;
+}
+input.details-btn:hover,
+input.details-btn:focus {
+  cursor: pointer;
+  border-color: var(--clr-accent);
+  color: var(--clr-neutral);
+  background-color: var(--clr-accent);
 }
 div.details-btn {
   display: flex;
   align-items: center;
 }
 
+div.grid-content-section-1 {
+  height: 106px;
+  overflow: hidden;
+}
+div.grid-content-section-2 {
+  height: 90px;
+  overflow: hidden;
+}
+div.grid-content-section-3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 73px;
+  overflow: hidden;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 /* =============
 x. media queries
    ============= */
@@ -406,7 +453,7 @@ x. media queries
     border-top-right-radius: 5px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 769px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
 
   img.grid-image {
     width: auto;
@@ -415,7 +462,7 @@ x. media queries
   }
 }
 
-@media screen and (min-width: 770px) and (max-width: 989px) {
+@media screen and (min-width: 768px) and (max-width: 989px) {
 
   div.search-wrapper {
     width: 720px;
