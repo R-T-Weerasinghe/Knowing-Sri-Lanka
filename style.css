@@ -129,7 +129,7 @@ div.content-grid-tiles-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-
+  /* row-gap: 50px; */
   padding: 10px 0; 
 }
 
@@ -237,7 +237,7 @@ input.search-text {
 input.search-text::placeholder {
   color: var(--clr-secondary);
 }
-div.flex {    /* to contain vacation type cols */
+div.flex {    /* div is to contain vacation type cols */
   display: flex;
   flex-wrap: wrap;
 }
@@ -269,6 +269,7 @@ input.search-checkbox + label.check::before {   /* select neighbour */
 }
 input.search-checkbox:checked + label.check::before {/* <-- Style its checked state */
   background: var(--clr-primary);
+  box-shadow: 0 0 0 4px var(--clr-neutral) inset;   /* h v blur spread */
 }
 label.check {
   font-size: var(--fs-400);
