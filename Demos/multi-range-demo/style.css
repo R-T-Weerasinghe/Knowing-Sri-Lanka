@@ -1,9 +1,6 @@
-body {
-    background-color: #666;
-    margin: 100px 50px;
-  }
-  
-  [slider] {
+
+  div.slider-main-container {
+    touch-action: none;
     position: relative;
     height: 14px;
     border-radius: 10px;
@@ -11,32 +8,32 @@ body {
     margin: 45px 0 10px 0;
   }
   
-  [slider] > div {
+  div.slider-main-container > div.slider-style-container {
     position: absolute;
     left: 13px;
     right: 15px;
     height: 14px;
   }
   
-  [slider] > div > [inverse-left] {
+  div.slider-style-container > div.bg-left {
     position: absolute;
-    left: 0;
+    left: -10px;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #F00;
+    margin: 0 7px;
+  }
+  
+  div.slider-style-container > div.bg-right {
+    position: absolute;
+    right: -10px;
     height: 14px;
     border-radius: 10px;
     background-color: #CCC;
     margin: 0 7px;
   }
   
-  [slider] > div > [inverse-right] {
-    position: absolute;
-    right: 0;
-    height: 14px;
-    border-radius: 10px;
-    background-color: #CCC;
-    margin: 0 7px;
-  }
-  
-  [slider] > div > [range] {
+  div.slider-style-container > div.bg-middle{
     position: absolute;
     left: 0;
     height: 14px;
@@ -44,7 +41,7 @@ body {
     background-color: #1ABC9C;
   }
   
-  [slider] > div > [thumb] {
+  div.slider-style-container > span.thumb {
     position: absolute;
     top: -7px;
     z-index: 2;
@@ -59,7 +56,7 @@ body {
     outline: none;
   }
   
-  [slider] > input[type=range] {
+  div.slider-main-container > input.slider {
     position: absolute;
     pointer-events: none;
     -webkit-appearance: none;
@@ -71,31 +68,32 @@ body {
     filter: alpha(opacity=0);
     -moz-opacity: 0;
     -khtml-opacity: 0;
-    opacity: 0;
+    opacity: 0; /*  0 */
+    cursor: pointer;
   }
   
-  div[slider] > input[type=range]::-ms-track {
+  div.slider-main-container > input.slider::-ms-track {
     -webkit-appearance: none;
     background: transparent;
     color: transparent;
   }
   
-  div[slider] > input[type=range]::-moz-range-track {
+  div.slider-main-container > input.slider::-moz-range-track {
     -moz-appearance: none;
     background: transparent;
     color: transparent;
   }
   
-  div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+  div.slider-main-container > input.slider:focus::-webkit-slider-runnable-track {
     background: transparent;
     border: transparent;
   }
   
-  div[slider] > input[type=range]:focus {
+  div.slider-main-container > input.slider:focus {
     outline: none;
   }
   
-  div[slider] > input[type=range]::-ms-thumb {
+  div.slider-main-container > input.slider::-ms-thumb {
     pointer-events: all;
     width: 28px;
     height: 28px;
@@ -104,7 +102,7 @@ body {
     background: red;
   }
   
-  div[slider] > input[type=range]::-moz-range-thumb {
+  div.slider-main-container > input.slider::-moz-range-thumb {
     pointer-events: all;
     width: 28px;
     height: 28px;
@@ -113,7 +111,7 @@ body {
     background: red;
   }
   
-  div[slider] > input[type=range]::-webkit-slider-thumb {
+  div.slider-main-container > input.slider::-webkit-slider-thumb {
     pointer-events: all;
     width: 28px;
     height: 28px;
@@ -123,22 +121,22 @@ body {
     -webkit-appearance: none;
   }
   
-  div[slider] > input[type=range]::-ms-fill-lower {
+  div.slider-main-container > input.slider::-ms-fill-lower {
     background: transparent;
     border: 0 none;
   }
   
-  div[slider] > input[type=range]::-ms-fill-upper {
+  div.slider-main-container > input.slider::-ms-fill-upper {
     background: transparent;
     border: 0 none;
   }
   
-  div[slider] > input[type=range]::-ms-tooltip {
+  div.slider-main-container > input.slider::-ms-tooltip {
     display: none;
   }
   
-  [slider] > div > [sign] {
-    opacity: 0;
+  div.slider-style-container > div.tooltip {
+    opacity: 0.7;
     position: absolute;
     margin-left: -11px;
     top: -39px;
@@ -155,7 +153,7 @@ body {
     text-align: center;
   }
   
-  [slider] > div > [sign]:after {
+  div.slider-style-container > div.tooltip::after {
     position: absolute;
     content: '';
     left: 0;
@@ -168,12 +166,14 @@ body {
     border-top-color: #1ABC9C;
   }
   
-  [slider] > div > [sign] > span {
+  div.tooltip > span.tooltip {
     font-size: 12px;
     font-weight: 700;
     line-height: 28px;
   }
   
-  [slider]:hover > div > [sign] {
+  div.slider-main-container:hover > 
+  div.slider-style-container > 
+  div.tooltip {
     opacity: 1;
   }
