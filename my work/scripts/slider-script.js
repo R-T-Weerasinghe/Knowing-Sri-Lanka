@@ -68,22 +68,19 @@ function update_slider_styles() {
     }
 }
 
+// to map physical activities value to text
 function left_map(slider) {
-    let physical_activity = ['None', 'Low', 'Moderate', 'High', 'Extreme'];
+    let physical_activity = ['None', 'Low', 'Mid', 'High', 'Max'];
     slider_left(slider);
     let tt_content_span = slider.parentNode.children[0].children[5].children[0].children[1];
-    console.log(tt_content_span);
     let i = parseInt(tt_content_span.innerHTML);
-    console.log(i);
     tt_content_span.innerHTML = physical_activity[i];
 }
 
 function right_map(slider) {
-    let physical_activity = ['None', 'Low', 'Moderate', 'High', 'Extreme'];
+    let physical_activity = ['None', 'Low', 'Mid', 'High', 'Max'];
     slider_right(slider);
     let tt_content_span = slider.parentNode.children[0].children[6].children[0].children[1];
-    console.log(tt_content_span);
     let i = parseInt(tt_content_span.innerHTML);
-    console.log(i);
     tt_content_span.innerHTML = physical_activity[i];
 }
