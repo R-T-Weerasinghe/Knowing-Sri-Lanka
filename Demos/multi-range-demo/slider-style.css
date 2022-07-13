@@ -2,10 +2,10 @@
   div.slider-main-container {
     touch-action: none;
     position: relative;
-    height: 14px;
+    height: 48px;
     border-radius: 10px;
     text-align: left;
-    margin: 45px 0 10px 0;
+    margin: 45px 35px 15px;
   }
   
   div.slider-main-container > div.slider-style-container {
@@ -139,11 +139,12 @@
     opacity: 0.7;
     position: absolute;
     margin-left: -11px;
-    top: -39px;
+    top: -39px; /* 39px */
     z-index:3;
     background-color: #1ABC9C;
     color: #fff;
-    width: 28px;
+    width: 86px;
+    transform: translateX(-30px);
     height: 28px;
     border-radius: 28px;
     -webkit-border-radius: 28px;
@@ -152,12 +153,16 @@
     justify-content: center;
     text-align: center;
   }
-  
+  div.slider-style-container > div.tt-left {
+    top: 25px;
+  }
   div.slider-style-container > div.tooltip::after {
     position: absolute;
     content: '';
-    left: 0;
+    left: 35%;
     border-radius: 16px;
+  }
+  div.slider-style-container > div.tt-right::after {
     top: 19px;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
@@ -165,7 +170,14 @@
     border-top-style: solid;
     border-top-color: #1ABC9C;
   }
-  
+  div.slider-style-container > div.tt-left::after {
+    top: -7px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom-width: 16px;
+    border-bottom-style: solid;
+    border-bottom-color: #1ABC9C;
+  }
   div.tooltip > span.tooltip {
     font-size: 12px;
     font-weight: 700;
