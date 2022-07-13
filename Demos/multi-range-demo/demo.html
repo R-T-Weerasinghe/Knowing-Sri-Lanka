@@ -9,25 +9,24 @@
   <link rel="stylesheet" href="style.css">
   <script src="slider-script.js"></script>
 </head>
-<body>
-  <div slider class="slider-main-container" id="slider-distance">
+<body onload="update_slider_styles()">
+  <div class="slider-main-container" id="slider-distance">
     <div class="slider-style-container">
-      <div inverse-left class="bg-left" style="width:30%;"></div>
-      <div inverse-right class="bg-right"  style="width:40%;"></div>
-      <div range class="bg-middle" style="left:30%;right:40%;"></div>
-      <span thumb class="thumb thumb-left"  style="left:30%;"></span>
-      <span thumb class="thumb thumb-right" style="left:60%;"></span>
-      <div sign class="tooltip tt-left" style="left:30%;">
-        <span class="tooltip tt-left" id="value">30</span>
+      <div id="bg-left" class="bg-left" style="width:30%;"></div>
+      <div id="bg-right" class="bg-right"  style="width:40%;"></div>
+      <div id="bg-middle" class="bg-middle" style="left:30%;right:40%;"></div>
+      <span id="thumb-left" class="thumb thumb-left"  style="left:30%;"></span>
+      <span id="thumb-right" class="thumb thumb-right" style="left:60%;"></span>
+      <div id="tt-left-div" class="tooltip tt-left" style="left:30%;">
+        <span id="tt-left-span" class="tooltip tt-left" id="value">30</span>
       </div>
-      <div sign class="tooltip tt-right" style="left:60%;">
-        <span class="tooltip tt-right" id="value">60</span>
+      <div id="tt-right-div" class="tooltip tt-right" style="left:60%;">
+        <span id="tt-right-span" class="tooltip tt-right" id="value">60</span>
       </div>
     </div>
 
-    <input class="slider" type="range" tabindex="0" value="3" max="15" min="-10" step="1" oninput="slider1(this)">
-    <input class="slider" type="range" tabindex="0" value="6" max="15" min="-10" step="1" oninput="slider2(this)">
-    
+    <input id="slider-left" class="slider slider-left" type="range" tabindex="0" value="3" max="10" min="-10" step="1" oninput="slider_left(this)">
+    <input id="slider-right" class="slider slider-right" type="range" tabindex="0" value="6" max="10" min="-10" step="1" oninput="slider_right(this)">
   </div>
 </body>
 </html>
