@@ -1,0 +1,81 @@
+body{
+    font-family: "Open Sans" , sans-serif;
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+#image{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading{
+    font-size: 28px;
+    letter-spacing: 3px;
+    color:rgb(57, 189, 188);
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#text1{
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.form-element{
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(145, 217, 216);
+    height: 34px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color:rgb(85, 85, 85);
+    background-color:white;
+}
+
+#form-textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(145, 217, 216);
+    font-size: 14px;
+    padding: 6px 12px;
+    color:rgb(85, 85, 85);
+    background-color:white;
+}
+
+.btn{
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+    padding: 5px 1px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(232, 199, 0);
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+}

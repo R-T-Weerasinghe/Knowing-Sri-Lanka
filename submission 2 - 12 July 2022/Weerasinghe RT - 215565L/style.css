@@ -1,0 +1,552 @@
+/* NOTE : Site is designed for mobile and changed accordingly using media queries */
+
+/* ===========================================================================
+0. root
+   ============================================================================ */
+:root {
+  --clr-primary: hsl(180, 54%, 48%);
+  --clr-secondary: hsl(221, 35%, 62%);
+
+  /* --clr-accent: hsl(50, 100%, 49%); */
+  --clr-accent: hsl(11, 96%, 55%);
+  --clr-neutral: white;
+
+  --ff-primary: 'Open Sans', sans-serif;
+  --fs-300: 0.75rem;  /* 12px */
+  --fs-400: 0.875rem; /* 14px */
+  --fs-450: 1rem;
+  --fs-500: 1.75rem;  /* 28px */
+  --fs-600: 2.5rem;
+  
+}
+body {
+  background-color:white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ===================================================================
+1. CSS Reset
+   ==================================================================== */
+
+/* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   /* padding and border are included in the width and height */
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;    /* removes all the font weights and sizes from headings as well */
+}
+
+ul.no-list, 
+ol.no-list {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================================================================
+2. Main layout (mobile)
+   ================================================================ */ 
+
+div.navbar,
+div.footer {
+    height: 20vh;
+    background-color: hsl(199, 100%, 50%);
+}
+div.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 100%; */
+    /* padding: 0 2%; */
+    justify-content: center;
+    gap: 20px;
+}
+div.search-container {
+    width: 100%;
+    /* height: 100%;   of parent  */
+}
+
+div.content-main-container {
+    width: 100%;   
+    /* height: 100%; */
+}
+
+/* ==============================================================
+3. Search content toggle
+   ============================================================== */
+
+.tog-check { display: none; }
+
+.tog-content {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.tog-check:checked + .tog-content {
+  max-height: 400vh; /* any insanely large number if a lot of contents - otherwise it will cut out some */
+  opacity: 1;
+  visibility: visible;
+}
+
+.tog-lbl {
+  display: inline-block; 
+  width: 100%;
+  cursor: pointer;
+ }
+
+/* ===============================================================
+4. Grid layout
+   =============================================================== */
+
+div.content-grid-tiles-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  /* row-gap: 50px; */
+  padding: 10px 0; 
+}
+
+/* div.grid-tile:nth-child(odd) {
+  color: white;
+  background-color: black;
+} */
+div.grid-tile:nth-child(n) {
+  color: black;
+  background-color: white;
+}
+
+div.grid-tile { 
+  width: 100%;
+  height: 488px;
+}
+div.tile-image-container {
+  position: relative;
+}
+img.tile-image {
+  width: auto;
+  max-height: 215px;
+  margin: auto;
+}
+div.tile-image-featured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+}
+div.hidden {
+  visibility: hidden;
+}
+div.tile-image-details-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 5px;
+}
+
+/* ===============================================================
+5. Search Aesthetics
+   =============================================================== */
+div.search-container {
+  background-color: var(--clr-neutral);
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+/* div.search-container-border {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--clr-neutral);
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+} */
+div.tog-content {
+  padding: 0 10px;
+}
+div.tog-lbl {
+  position: relative;
+  background-color:var(--clr-primary);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+label.tog-lbl {
+  color: var(--clr-neutral);
+  background-color: transparent;
+  /* box-sizing: border-box; */
+
+  font-size: var(--fs-400);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+label.tog-lbl > span.material-symbols-outlined {
+  position: absolute;
+  right: 5px;
+  font-weight: 700;
+}
+
+div.search-form-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.search-form-row > div {
+  padding: 8px; 
+}
+
+div.search-form-row h5 {
+  font-size: var(--fs-400);
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+input.search-text {
+  padding: 6px 12px;
+  border: 1px solid var(--clr-primary);
+  width: 100%;
+  color: var(--clr-secondary);
+}
+
+input.search-text::placeholder {
+  color: var(--clr-secondary);
+}
+div.flex {    /* div is to contain vacation type cols */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.search-row-col {
+  width: 100%;
+}
+div.search-row-col > div {
+  padding: 5px 0;
+}
+
+input.search-checkbox {
+  visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+input.search-checkbox + label.check::before {   /* select neighbour */
+  content: '';
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--clr-primary);
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 10px;
+}
+input.search-checkbox:checked + label.check::before {/* <-- Style its checked state */
+  background: var(--clr-primary);
+  box-shadow: 0 0 0 4px var(--clr-neutral) inset;   /* h v blur spread */
+}
+label.check {
+  font-size: var(--fs-400);
+  cursor: pointer;
+}
+
+select.select {
+  padding: 6px 12px;
+  border: 1px solid var(--clr-primary) ;
+  width: 100%;
+}
+
+div.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+div.btn-wrapper > input.search-btn {
+  width: 180px;
+  border: 3px solid var(--clr-primary);
+  border-radius: 100px;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+
+  transition-property: background-color, border, color;
+  transition-duration: 0.05s;
+  transition-timing-function: linear;
+}
+
+div.btn-wrapper > input.search-btn:hover,
+div.btn-wrapper > input.search-btn:focus {
+  background-color: var(--clr-accent);
+  border: 3px solid var(--clr-accent);
+  color: var(--clr-neutral);
+  cursor: pointer
+}
+
+hr {
+  height: 2px;
+  background-color: var(--clr-primary);
+  border: none;
+}
+/* ============================================================================
+6. Content aesthetics
+   ============================================================================ */
+
+div.main-container {
+  padding: 0 15px;
+}
+div.content-main-container {
+  background-color: var(--clr-neutral);
+}
+
+div.content-header > h1 {
+  text-transform: uppercase;
+  font-size: var(--fs-500);
+  color: var(--clr-primary);
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+div.grid-tile {
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+}
+div.tile-image-featured {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral);
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 3px 0 10px;   /* top-left | top-right & bottom-left | bottom-right */
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  /*box-shadow: 3px 3px 5px #888; */   /* h-offeset v-offset blur spread colour */
+}
+div.tile-image-featured > span.material-symbols-outlined {
+  vertical-align: bottom;
+  font-size: 24px;
+}
+
+div.tile-image-details-container {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+}
+div.tile-image-details-section {
+  display: inline-block;
+  padding-left: 10px;
+}
+div.tile-image-details-section > span.material-symbols-outlined {
+  vertical-align: bottom;
+}
+div.tile-content-container {
+  padding: 5px 15px;
+  height: 273px;
+  position: relative;
+}
+h3.grid-content-header {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+div.tile-content-container p {
+  font-size: var(--fs-400);
+  color: var(--clr-secondary);
+  font-weight: 600;
+  padding-top: 10px;
+}
+div.tile-content-container h5 {
+  font-size: var(--fs-400);
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+div.grid-content-row {
+  padding: 10px 0;
+}
+div.grid-content-row > ul {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  color: var(--clr-secondary);
+  font-weight: 600;
+  background-color: white;
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-position: inside;
+}
+input.details-btn {
+  width: 120px;
+  border: 2px solid var(--clr-primary);
+  border-radius: 100px;
+  padding: 5px;
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+
+  transition-property: background-color, border, color;
+  transition-duration: 0.05s;
+  transition-timing-function: linear;
+}
+input.details-btn:hover,
+input.details-btn:focus {
+  cursor: pointer;
+  border-color: var(--clr-accent);
+  color: var(--clr-neutral);
+  background-color: var(--clr-accent);
+}
+div.details-btn {
+  display: flex;
+  align-items: center;
+}
+div.tile-content-section-1,
+div.tile-content-section-2,
+div.tile-content-section-3 {
+  overflow: hidden;
+}
+div.tile-content-section-1 { height: 106px; }
+div.tile-content-section-2 { height: 90px; }
+div.tile-content-section-3 {
+  height: 73px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* =============
+x. media queries
+   ============= */
+@media screen and (min-width: 480px) {
+  input.search-checkbox + label.check::before {
+    width: 28px;
+    height: 28px;
+  }
+  /* div.search-row-col {
+    width: 50%;
+  } */
+  div.flex { 
+    flex-wrap: nowrap;
+  }
+  img.tile-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+  img.tile-image {
+    width: auto;
+    max-height: 215px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+
+  div.search-container {
+    width: 720px;
+  }
+
+  div.content-main-container {
+    width: 720px;
+  }
+  div.content-grid-tiles-container {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  img.tile-image {
+    width: 343px;
+    height: 215px;
+    margin: auto;
+  }
+
+  div.grid-tile { 
+    width: 343px;
+    height: 488px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .tog-content {
+    visibility: visible;
+    max-height: 100vh;
+    opacity: 1;
+  }
+
+  .tog-lbl { cursor:default; }
+
+  div.main-container {
+    flex-wrap: nowrap;
+  }
+
+  div.search-container {
+    width: 300px;
+  }
+
+  div.content-main-container {
+    width: 720px;
+  }
+
+  div.content-grid-tiles-container { grid-template-columns: 1fr 1fr; }
+
+  img.tile-image {
+    width: 343px;
+    height: 215px;
+    margin: auto;
+  }
+
+  div.grid-tile { 
+    width: 343px;
+    height: 488px;
+  }
+
+  label.tog-lbl > span.material-symbols-outlined {
+    visibility: hidden;
+  }
+}
+
+/* =========================================================
+z. Google icons
+   ========================================================= */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
