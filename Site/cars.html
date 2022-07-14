@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rent a Car Sri Lanka | Knowing Cuba</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/car-style.css">
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+<head>
+    <title>Rent a Car Sri Lanka | Knowing Cuba</title>
 
-    <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/car-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar"></div>
+    </header>
+
+    <div class="main-container">
         <img id="image" src="Cars.jpg" alt="Cars">
 
         <p id="heading"> Rent a car Sri Lanka</p>
 
         <p id="text1">
-        Knowing Cuba works with local car rental offices across Cuba to meet your travel needs. 
-        Please complete the following reservation request form and confirm your booking within 24 hours.</p>
+            Knowing Cuba works with local car rental offices across Cuba to meet your travel needs.
+            Please complete the following reservation request form and confirm your booking within 24 hours.</p>
 
         <form>
             <div class="container-1">
@@ -24,7 +31,7 @@
                     <div class="form-input">
                         <label for="pick_cities">Pick up city</label>
                         <span style="color: red;">*</span><br>
-                        <select class="form-element" name="pickup_city" id="pick_cities">
+                        <select class="form-element" name="pickup_city" id="pick_cities" required>
                             <option value="0">Select</option>
                             <option value="C1">Anuradhapura</option>
                             <option value="C2">Batticaloa</option>
@@ -46,17 +53,18 @@
                             <option value="C18">Vavuniya</option>
                         </select><br><br>
                     </div>
-            
+
                     <div class="form-input">
                         <label for="pickup_date">Pick up date</label>
                         <span style="color: red;">*</span><br>
-                        <input class="form-element" type="date" id="pickup_date" placeholder="yyyy-mm-dd" required><br><br>
+                        <input class="form-element" type="date" id="pickup_date" placeholder="yyyy-mm-dd"
+                            required><br><br>
                     </div>
-            
+
                     <div class="form-input">
                         <label for="pick_time">Pick up time</label>
                         <span style="color: red;">*</span><br>
-                        <select class="form-element" name="pickup_time" id="pick_time">
+                        <select class="form-element" name="pickup_time" id="pick_time" required>
                             <option value="0">Select</option>
                             <option value="10am">10:00</option>
                             <option value="11am">11:00</option>
@@ -75,7 +83,7 @@
                     <div class="form-input">
                         <label for="drop_cities">Drop off city</label>
                         <span style="color: red;">*</span><br>
-                        <select class="form-element" name="dropoff_city" id="drop_cities">
+                        <select class="form-element" name="dropoff_city" id="drop_cities" required>
                             <option value="0">Select</option>
                             <option value="C1">Anuradhapura</option>
                             <option value="C2">Batticaloa</option>
@@ -97,17 +105,17 @@
                             <option value="C18">Vavuniya</option>
                         </select><br><br>
                     </div>
-            
+
                     <div class="form-input">
                         <label for="dropoff_date">Drop off date</label>
                         <span style="color: red;">*</span><br>
-                        <input class="form-element" type="date" id="dropoff_date" placeholder="yyyy-mm-dd"><br><br>
+                        <input class="form-element" type="date" id="dropoff_date" placeholder="yyyy-mm-dd" required><br><br>
                     </div>
-            
+
                     <div class="form-input">
                         <label for="drop_time">Drop off time</label>
                         <span style="color: red;">*</span><br>
-                        <select class="form-element" name="dropoff_time" id="drop_time">
+                        <select class="form-element" name="dropoff_time" id="drop_time" required>
                             <option value="0">Select</option>
                             <option value="10am">10:00</option>
                             <option value="11am">11:00</option>
@@ -127,7 +135,7 @@
                 <div class="form-input">
                     <label for="category">Category</label>
                     <span style="color: red;">*</span><br>
-                    <select class="form-element" name="Category_type" id="category">
+                    <select class="form-element" name="Category_type" id="category" required>
                         <option value="0">Select</option>
                         <option value="1">Economic</option>
                         <option value="2">Medium</option>
@@ -141,7 +149,7 @@
                 <div class="form-input">
                     <label for="transmission">Transmission</label>
                     <span style="color: red;">*</span><br>
-                    <select class="form-element" name="Transmission_type" id="transmission">
+                    <select class="form-element" name="Transmission_type" id="transmission" required>
                         <option value="0">Select</option>
                         <option value="1">Manual</option>
                         <option value="2">Automatic</option>
@@ -154,7 +162,7 @@
             <div class="form-input" id="title">
                 <label for="title">Title</label>
                 <span style="color: red;">*</span><br>
-                <select class="form-element" name="Title_type" id="title">
+                <select class="form-element" name="Title_type" id="title" required>
                     <option value="0">Select</option>
                     <option value="1">Mr</option>
                     <option value="2">Mrs</option>
@@ -165,36 +173,36 @@
                 <div class="form-input">
                     <label for="first_name">First name</label>
                     <span style="color: red;">*</span><br>
-                    <input class="form-element" type="text" id="first_name"><br><br>
+                    <input class="form-element" type="text" id="first_name" required><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="middle_name">Middle name</label><br>
-                    <input class="form-element" type="text" id="middle_name"><br><br>
+                    <input class="form-element" type="text" id="middle_name" required><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="last_name">Last name</label>
                     <span style="color: red;">*</span><br>
-                    <input class="form-element" type="text" id="last_name"><br><br>
+                    <input class="form-element" type="text" id="last_name" required><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="email">Email</label>
                     <span style="color: red;">*</span><br>
-                    <input class="form-element" type="text" id="email"><br><br>
+                    <input class="form-element" type="text" id="email" required><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="phone_no">Phone</label>
                     <span style="color: red;">*</span><br>
-                    <input class="form-element" type="text" id="phone_no"><br><br>
+                    <input class="form-element" type="text" id="phone_no" required><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="residence_country">Country of residence</label>
                     <span style="color: red;">*</span><br>
-                    <select class="form-element" name="country_of_residence" id="residence_country">
+                    <select class="form-element" name="country_of_residence" id="residence_country" required>
                         <option value="0">Select</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Aland Islands</option>
@@ -443,11 +451,11 @@
                         <option value="ZW">Zimbabwe</option>
                     </select><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="license_country">Driver's license country</label>
                     <span style="color: red;">*</span><br>
-                    <select class="form-element" name="drivers_license_country" id="license_country">
+                    <select class="form-element" name="drivers_license_country" id="license_country" required>
                         <option value="0">Select</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Aland Islands</option>
@@ -696,11 +704,11 @@
                         <option value="ZW">Zimbabwe</option>
                     </select><br><br>
                 </div>
-        
+
                 <div class="form-input">
                     <label for="hdyhau">How did you hear about us?:</label>
                     <span style="color: red;">*</span><br>
-                    <select class="form-element" name="HAU_types" id="hdyhau">
+                    <select class="form-element" name="HAU_types" id="hdyhau" required>
                         <option value="select">Select:</option>
                         <option value="web_search">Web search</option>
                         <option value="referral">Referral</option>
@@ -717,26 +725,32 @@
             <div class="elements">
                 <label for="msg">Message</label>
                 <span style="color: red;">*</span><br>
-                <textarea id="form-textarea" name="Message" id="msg" rows="7"></textarea>
+                <textarea id="form-textarea" name="Message" id="msg" rows="7" required></textarea>
             </div>
-    
+
             <p id="text2" class="elements">
-                Sending this email does not guarantee immediate reservation. 
-                You will receive a confirmation within 24 hours of booking, 
-                and you will have 24 hours following that to make a payment 
-                following the payment steps you'll receive in the confirmation email. 
-                For more details about the forms of payment accepted, please review our 
+                Sending this email does not guarantee immediate reservation.
+                You will receive a confirmation within 24 hours of booking,
+                and you will have 24 hours following that to make a payment
+                following the payment steps you'll receive in the confirmation email.
+                For more details about the forms of payment accepted, please review our
                 payment details and policy at the bottom of our website.
             </p>
-        
+
             <p id="warning" class="elements">
                 <i class="fa fa-info-circle"></i>
-                Please note that you must be 21 and over to rent a car in Sri Lanka
+                Please note that you must be 18 and over to rent a car in Sri Lanka
             </p>
 
-            <div class="elements">
+            <div class="elements btn">
                 <button class="btn" type="submit">SUBMIT</button>
             </div>
         </form>
-    </body>
+    </div>
+
+    <footer>
+        <div class="footer"></div>
+    </footer>
+</body>
+
 </html>
