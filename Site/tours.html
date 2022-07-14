@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuba Vacation & Travel Packages | Knowing Cuba</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/slider-style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- google material icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script src="./scripts/slider-script.js"></script>
+</head>
+
+<body onload="update_slider_styles()">
+    <header>
+        <div class="navbar"></div>
+    </header>
+
+    <div class="main-container">
+        <div class="search-container">
+
+            <div class="tog-lbl">
+                <label for="search-toggle" class="tog-lbl">
+                    Customize Your Search
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </label>
+            </div>
+
+            <input type="checkbox" class="tog-check" id="search-toggle">
+            <div class="tog-content search-form-wrapper">
+                <form class="search-form">
+                    <div class="search-form-row">
+                        <div>
+                            <h5>Keyword Search:</h5>
+                        </div>
+                        <div>
+                            <input type="text" class="search-text" name="keyword" id="keyword"
+                                placeholder="Enter keyword">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="search-form-row">
+                        <div>
+                            <h5>Choose your type of tour:</h5>
+                        </div>
+                        <div class="flex">
+                            <div class="search-row-col">
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type"
+                                        id="check-history" value="history">
+                                    <label class="check" for="check-history">History</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type"
+                                        id="check-nature" value="nature">
+                                    <label class="check" for="check-nature">Nature</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type" id="check-classes"
+                                        value="classes">
+                                    <label class="check" for="check-classes">Classes</label>
+                                </div>
+                            </div>
+                            <div class="search-row-col">
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type"
+                                        id="check-nightlife" value="nightlife">
+                                    <label class="check" for="check-nightlife">Nightlife</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type"
+                                        id="check-sports" value="sports">
+                                    <label class="check" for="check-sports">Sports</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type" id="check-culinary"
+                                        value="culinary">
+                                    <label class="check" for="check-culinary">Culinary</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-type" id="check-cultural"
+                                        value="cultural">
+                                    <label class="check" for="check-cultural">Cultural</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="search-form-row">
+                        <div>
+                            <h5>Duration:</h5>
+                        </div>
+                        <div class="search-row-col">
+                            <div>
+                                <input class="search-checkbox" type="checkbox" name="tour-duration" id="check-0-to-5-hours"
+                                    value="0-to-5-hours">
+                                <label class="check" for="check-0-to-5-hours">0-5 hours</label>
+                            </div>
+
+                            <div>
+                                <input class="search-checkbox" type="checkbox" name="tour-duration" id="check-all-day"
+                                    value="all-day">
+                                <label class="check" for="check-all-day">All day</label>
+                            </div>
+
+                            <div>
+                                <input class="search-checkbox" type="checkbox" name="tour-duration"
+                                    id="check-overnight-stay" value="overnight-stay">
+                                <label class="check" for="check-overnight-stay">Overnight stay</label>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>                  
+
+                    <hr>
+
+                    <div class="search-form-row">
+                        <div>
+                            <h5>Depature City:</h5>
+                        </div>
+                        <div>
+                            <select class="select" name="city">
+                                <option value="colombo">Colombo</option>
+                                <option value="galle">Galle</option>
+                                <option value="kandy">Kandy</option>
+                                <option value="jaffna">Jaffna</option>
+                                <option value="badulla">Badulla</option>
+                                <option value="batticaloa">Batticaloa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="search-form-row">
+                        <div>
+                            <h5>Frequency:</h5>
+                        </div>
+                        <div class="flex">
+                            <div class="search-row-col">
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq"
+                                        id="check-mon" value="mon">
+                                    <label class="check" for="check-mon">Monday</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq" id="check-tue"
+                                        value="tue">
+                                    <label class="check" for="check-tue">Tuesday</label>
+                                </div>
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq"
+                                        id="check-wed" value="wed">
+                                    <label class="check" for="check-wed">Wednesday</label>
+                                </div>
+
+                            </div>
+                            <div class="search-row-col">
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq"
+                                        id="check-thu" value="thu">
+                                    <label class="check" for="check-thu">Thursday</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq" id="check-fri"
+                                        value="fri">
+                                    <label class="check" for="check-fri">Friday</label>
+                                </div>
+
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq" id="check-sat"
+                                        value="sat">
+                                    <label class="check" for="check-sat">Saturday</label>
+                                </div>
+                                <div>
+                                    <input class="search-checkbox" type="checkbox" name="tour-freq"
+                                        id="check-sun" value="sun">
+                                    <label class="check" for="check-sun">Sunday</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="search-form-row">
+                        <div class="btn-wrapper">
+                            <input type="button" class="search-btn" value="Search" onclick="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div class="content-main-container">
+            <div class="content-header">
+                <h1>Tours & Packages</h1>
+                <strong>8 results found</strong>
+            </div>
+            <div class="content-grid-tiles-container">
+                <!-- tile 1 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo1.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                12 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 2 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo2.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                8 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 3 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo3.jpg" alt="dummy-image">
+                        <div class="tile-image-featured">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                24 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 4 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo4.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                3 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 5 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo5.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                10 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 6 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo6.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                5 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 7 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo7.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                10 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tile 8 -->
+                <div class="grid-tile">
+                    <div class="tile-image-container">
+                        <img class="tile-image" src="./images/demo8.jpg" alt="dummy-image">
+                        <div class="tile-image-featured hidden">
+                            Popular
+                            <!-- <span class="material-symbols-outlined">
+                                favorite
+                            </span> -->
+                        </div>
+                        <div class="tile-image-details-container">
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    paid
+                                </span>
+                                from $575
+                            </div>
+                            <div class="tile-image-details-section">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                4 hours
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-content-container">
+                        <div class="tile-content-section-1">
+                            <h3 class="grid-content-header">Havana special</h3>
+                            <p>3 nights in Havana, Axel Telégrafo Hotel or similar</p>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-2">
+                            <h5>Sites included:</h5>
+                            <ul>
+                                <li>Havana</li>
+                                <li>Uruguay</li>
+                                <li>Paraguay</li>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-content-row tile-content-section-3">
+                            <input type="button" value="Details" class="details-btn" onclick="location.href = './maintenance/maintenance.html';">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer"></div>
+    </footer>
+</body>
+
+</html>
