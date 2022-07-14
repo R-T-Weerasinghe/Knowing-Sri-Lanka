@@ -1,0 +1,161 @@
+body{
+    font-family: "Open Sans" , sans-serif;
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+.container-1{
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-1 > div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-2{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.container-2 > div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#image{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading{
+    font-size: 28px;
+    letter-spacing: 3px;
+    color:rgb(57, 189, 188);
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#text1{
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+    align-items: stretch;
+}
+
+.form-input{
+    display: block;
+    margin-bottom: -20px;
+    line-height: 20px;
+}
+
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.form-element{
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(145, 217, 216);
+    height: 34px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color:rgb(85, 85, 85);
+    background-color:white;
+}
+
+#title{
+    width: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.elements{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#form-textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(145, 217, 216);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+    color:rgb(85, 85, 85);
+    background-color:white;
+}
+
+.btn{
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+    padding: 5px 1px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(232, 199, 0);
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-heading{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: rgb(56, 189, 188);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#text2{
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#warning{
+    color: rgb(139, 109, 59);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
