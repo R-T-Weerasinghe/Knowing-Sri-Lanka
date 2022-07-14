@@ -72,8 +72,7 @@ div.slider-style-container > span.thumb {
   transition-timing-function: ease-in-out;
 }
 div.slider-main-container:hover span.thumb {
-  background-color: var(--clr-primary);
-  
+  background-color: var(--clr-primary); 
 }
 
 div.slider-main-container > input.slider {
@@ -156,13 +155,14 @@ div.slider-main-container > input.slider::-ms-tooltip {
 }
 
 div.slider-style-container > div.tooltip {
-  opacity: 0.7;
+  opacity: 0.8;
   position: absolute;
   margin-left: -11px;
   top: -42px; /* 39px */
   z-index:3;
-  background-color: #1ABC9C;
-  color: #fff;
+  /* background-color: #1ABC9C; */
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
   width: 55px;
   transform: translateX(-15px);
   height: 28px;
@@ -189,7 +189,8 @@ div.slider-style-container > div.tt-right::after {
   border-right: 14px solid transparent;
   border-top-width: 16px;
   border-top-style: solid;
-  border-top-color: #1ABC9C;
+  /* border-top-color: #1ABC9C; */
+  border-top-color: var(--clr-primary);
 }
 div.slider-style-container > div.tt-left::after {
   top: -7px;
@@ -197,7 +198,8 @@ div.slider-style-container > div.tt-left::after {
   border-right: 14px solid transparent;
   border-bottom-width: 16px;
   border-bottom-style: solid;
-  border-bottom-color: #1ABC9C;
+  border-bottom-color: var(--clr-primary);
+  /* border-bottom-color: #1ABC9C; */
 }
 div.tooltip span.tooltip {
   font-size: 14px;
