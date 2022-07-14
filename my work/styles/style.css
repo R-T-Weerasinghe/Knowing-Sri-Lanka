@@ -447,9 +447,13 @@ div.tile-content-section-3 {
   bottom: 0;
   left: 0;
 }
-/* =============
+
+span.google-icons-rating {
+  margin-left: -7px;
+}
+/* ============================================================================================
 x. media queries
-   ============= */
+   ============================================================================================ */
 @media screen and (min-width: 480px) {
   input.search-checkbox + label.check::before {
     width: 28px;
