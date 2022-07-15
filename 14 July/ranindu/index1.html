@@ -15,361 +15,551 @@
 
     
     <body>
-      <div id="header">
-        <div class="upper-lang-bar">
+        <header>
+            <div id="header">
+                <div class="upper-lang-bar">
+                    <img src="./imgs/mail1.png" style="margin-left: 80.8%; margin-top:1px; width: 15px; height: 11px; margin-bottom: -19px;  padding-top: 1px;">
 
-          <img src="./imgs/mail1.png" style="margin-left: 80.8%; margin-top:1px; width: 15px; height: 11px; margin-bottom: -19px;  padding-top: 1px;"><div style="text-align: right; font-size:14px; opacity: 80%; margin-right: 2%; cursor: pointer;" class="txt-small">CONTACT US &nbsp;&nbsp;ENGLISH &nbsp;|&nbsp; ESPANOL</div>
+                    <div style="text-align: right; font-size:14px; opacity: 80%; margin-right: 2%; cursor: pointer;" class="txt-small">
+                      CONTACT US &nbsp;&nbsp;ENGLISH &nbsp;|&nbsp; ESPANOL
+                    </div>
+                </div>
 
-        </div>
-        <div class="nav-bar">
-          <img src="./imgs/slIcon.jpg" style="width: 190px; height:120px; margin-left: 2%;">
-          <ul class="nav-bar-links">
-            <li><a href="#dfdf">VACATIONS</a></li>
-            <li><a href="#dfdf">TOURS</a></li>
-            <li><a href="#dfdf">CARS</a></li>
-            <li><a href="#dfdf">GROUPS</a></li>
-          </ul>
-          <div class="search-bar"><input type="text"><button type="submit" value="search" name="search"><i class="fa fa-search"></i></button></div>
-          <img src="./imgs/luggage.png" id="luggage-img">
-        </div>
-        <div class="slideshow-top-bar">⭐CULTURAL TOURS SINCE 2002⭐</div>
-      </div>
+                <div class="nav-bar">
+                    <img src="./imgs/slIcon.jpg" style="width: 190px; height:120px; margin-left: 2%;">
+                    <ul class="nav-bar-links">
+                        <li><a href="#dfdf">VACATIONS</a></li>
+                        <li><a href="#dfdf">TOURS</a></li>
+                        <li><a href="#dfdf">CARS</a></li>
+                        <li><a href="#dfdf">GROUPS</a></li>
+                    </ul>
 
+                    <div class="search-bar">
+                        <input type="text">
+                        <button type="submit" value="search" name="search">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
 
-        <div class="slideshow-container">
-          
-            <div class="slideshow-inner">
-              <div class="mySlides slide-in">
-            
-                <img  src='./imgs/main1.jpg' style='width: 100%;' alt="sally lightfoot crab"/>
-                <div class="text fadeMore">Nine Archs</div>
-                <div class="text small fadeMore">A breathtaking wonder</div>
-                <div class="text btn-go"><button value="GO>>" class="button-yellow">GO>></button></div>
-              </div>
-            
-              <div class="mySlides slide-in">
-            
-                <img  src='./imgs/main2.jpg' style='width: 100%; ' alt="fighting nazca boobies"/>
-                <div class="text fadeMore">Pasicuda</div>
-                <div class="text small fadeMore">Hevean above the horizon</div>
-                <div class="text btn-go"><button value="GO>>" class="button-yellow">GO>></button></div>
-              </div>
-            
-              <div class="mySlides slide-in">
-            
-                <img  src='./imgs/main3.jpg' style='width: 100%; ' alt="otovalo waterfall"/>
-                <div class="text fadeMore">Bambarakanda</div>
-                <div class="text small fadeMore">An art of the nature</div>
-                <div class="text btn-go"><button value="GO>>" class="button-yellow">GO>></button></div>
-              </div>
-            
-              <div class="mySlides slide-in">
-            
-                <img  src='./imgs/main4.jpg' style='width: 100%; ' alt="pelican"/>
-                <div class="text fadeMore">Sigiriya</div>
-                <div class="text small fadeMore">A miracle of the past</div>
-                <div class="text btn-go"><button value="GO>>" class="button-yellow">GO>></button></div>
-              </div>
-              
-              </div>
-            
-            
-              <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
-              <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+                    <img src="./imgs/luggage.png" id="luggage-img">
+                </div>
+
+                <div class="slideshow-top-bar">
+                    ⭐CULTURAL TOURS SINCE 2002⭐
+                </div>
             </div>
-            <br/>
+        </header>
+
+        <div class="main-container">
+            <div class="slideshow-container">
+                <div class="slideshow-inner">
+                    <div class="mySlides slide-in">
+                        <img  src='./imgs/main1.jpg' style='width: 100%;' alt=""/>
+                        <div class="text fadeMore">
+                            Nine Archs
+                        </div>
+                        <div class="text small fadeMore">
+                            A breathtaking wonder
+                        </div>
+                        <div class="text btn-go">
+                            <button value="GO>>" class="button-yellow">
+                                GO&gt;&gt;
+                            </button>
+                        </div>
+                    </div>
             
+                    <div class="mySlides slide-in">
+                        <img  src='./imgs/main2.jpg' style='width: 100%;' alt=""/>
+                        <div class="text fadeMore">
+                            Pasicuda
+                        </div>
+                        <div class="text small fadeMore">
+                            Hevean above the horizon
+                        </div>
+                        <div class="text btn-go">
+                            <button value="GO>>" class="button-yellow">
+                                GO&gt;&gt;
+                            </button>
+                        </div>
+                    </div>
             
-            <div style='text-align: center;'>
-              <span class="dot" id="dot1" onclick='currentSlides(1)'></span>
-              <span class="dot" id="dot2" onclick='currentSlides(2)'></span>
-              <span class="dot" id="dot3" onclick='currentSlides(3)'></span>
-              <span class="dot" id="dot4" onclick='currentSlides(4)'></span>
+                    <div class="mySlides slide-in">
+                        <img  src='./imgs/main3.jpg' style='width: 100%;' alt=""/>
+                        <div class="text fadeMore">
+                            Bambarakanda
+                        </div>
+                        <div class="text small fadeMore">
+                            An art of the nature
+                        </div>
+                        <div class="text btn-go">
+                            <button value="GO>>" class="button-yellow">
+                                GO&gt;&gt;
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides slide-in">
+                        <img  src='./imgs/main4.jpg' style='width: 100%;' alt=""/>
+                        <div class="text fadeMore">
+                            Sigiriya
+                        </div>
+                        <div class="text small fadeMore">
+                            A miracle of the past
+                        </div>
+                        <div class="text btn-go">
+                            <button value="GO>>" class="button-yellow">
+                                GO&gt;&gt;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slideshow-side-buttons">
+                    <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+                    <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+                </div>
+
+                <br/>
+                    
+                <div style='text-align: center;'>
+                    <span class="dot" id="dot1" onclick='currentSlides(1)'></span>
+                    <span class="dot" id="dot2" onclick='currentSlides(2)'></span>
+                    <span class="dot" id="dot3" onclick='currentSlides(3)'></span>
+                    <span class="dot" id="dot4" onclick='currentSlides(4)'></span>
+                </div>
             </div>
-            
-            </div>
+
             <div class="second-block">
-
-              <h1>Reservations</h1>
-              <div class="horizontal-menu">
-                <ul>
-                  <li><a href="#ssd"><img class="img-btns" src="./imgs/vacations-yellow.png" onclick="img_click(1)"></a></li>
-                  <li><a href="#ssd"><img class="img-btns" src="./imgs/tours-green.png" onclick="img_click(2)"> </a></li>
-                  <li><a href="#ssd"><img class="img-btns" src="./imgs/hotels-green.png" onclick="img_click(3)"></a></li>
-                  <li><a href="#ssd"><img class="img-btns" src="./imgs/cars-green.png" onclick="img_click(4)"></a></li>
-                  
-                </ul>
-              </div>
-
-              <div class="s-blocks-container">
-              <div class="s-block1" id="s-block1">
-                <div style="text-align: center; font-size: 24px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">Choose your type of vacation:</div>
-               <div class="checkboxes">
-                <ul>
-                  <li><input type="checkbox" name="trip-type" id="Culture" value="Culture"><label for="Culture">Culture</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Nature" value="Nature"><label id="N" for="Nature">Nature</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Beach" value="Beach"><label id="B" for="Beach">Beach</label></li>
-                </ul>
-                <ul>
-                  <li><input type="checkbox" name="trip-type" id="Classes" value="Classes"><label id="C1" for="Classes">Classes</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Religion" value="Religion"><label id="R" for="Religion">Religion</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Events" value="Events"><label id="E" for="Events">Events</label></li>
-                </ul>
-              </div>
-              <div class="s-block1-btn"><div id="tx">SEARCH</div></div>
-              </div>
-              <div class="s-block2" id="s-block2">
-                <div style="text-align: center; font-size: 24px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">Choose your type of tour:</div>
-               <div class="checkboxes">
-                <ul>
-                  <li><input type="checkbox" name="trip-type" id="History" value="History"><label for="History">History</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Nature2" value="Nature2"><label id="N" for="Nature2">Nature</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Classes2" value="Classes2"><label id="B" for="Classes2">Classes</label></li>
-                </ul>
-                <ul>
-                  <li><input type="checkbox" name="trip-type" id="Sports" value="Sports"><label id="C1" for="Sports">Sports</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Culinary" value="Culinary"><label id="R2" for="Culinary">Culinary</label></li>
-                  <li><input type="checkbox" name="trip-type" id="Cultural" value="Cultural"><label id="E2" for="Cultural">Cultural</label></li>
-                </ul>
-                <ul>
-                  <li><input type="checkbox" name="trip-type" id="Nightlife" value="Nightlife"><label id="C1" for="Nightlife">Nightlife</label></li>
-                </ul>
-              </div>
-              <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif; margin-top: 15px; margin-bottom: -5px;">Departure City:</div>
-              <select>
-                <option>Colombo</option>
-                <option>Katunayaka</option>
-                <option>Mattala</option>
-              </select>
-              <div class="s-block2-btn"><div id="tx">SEARCH</div></div>
-              </div>
-              <div class="s-block3" id="s-block3">
-                <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">City:</div>
-                <select>
-                  <option>Select</option>
-                  <option>Colombo</option>
-                  <option>Katunayaka</option>
-                  <option>Kandy</option>
-                  <option>Negombo</option>
-                  <option>Ella</option>
-                  <option>Galle</option>
-                  <option>Mattala</option>
-                  <option>Mattala</option>
-                  <option>Nuwaraeliya</option>
-                  <option>Matale</option>
-                </select>
-                <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 85%; color: grey; font-family: 'Helvetica Neue', sans-serif;">Stars:</div>
-                <ul>
-                  <li><i class="S fa-solid fa-star" id="star1" onclick="Star_click(1)"></i></li>
-                  <li><i class="S fa-solid fa-star" id="star2" onclick="Star_click(2)"></i></li>
-                  <li><i class="S fa-solid fa-star" id="star3" onclick="Star_click(3)"></i></li>
-                  <li><i class="S fa-solid fa-star" id="star4" onclick="Star_click(4)"></i></li>
-                  <li><i class="S fa-regular fa-star" style="color: black;" id="star5" onclick="Star_click(5)"></i></li>
-                </ul>
-                <div class="s-block3-btn"><div id="tx">SEARCH</div></div>
-              </div>
-              <div class="s-block4" id="s-block4">
-              
-                <div class="select-pick-up-city">
-                  <label for="input-pick-up-city"><div id="s-block4-select-label-text">Pick Up City:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-pick-up-city">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
-                </div>
-                <div class="select-drop-off-city">
-                  <label for="input-drop-off-city"><div id="s-block4-select-label-text">Drop off City:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-drop-off-city">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
-                </div>
-                <div class="select-pick-up-date">
-                  <label for="select-pick-up-date"><div id="s-block4-select-label-text">Pick up Date:</div></label>
-                  <input type="date">
-                </div>
-                <div class="select-drop-off-date">
-                  <label for="select-drop-off-date"><div id="s-block4-select-label-text">Drop Off Date:</div></label>
-                  <input type="date">
-                </div>
-                <div class="select-pick-up-time">
-                  <label for="input-pick-up-time"><div id="s-block4-select-label-text">Pick Up Time:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-pick-up-time">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
-                </div>
-                <div class="select-drop-off-time">
-                  <label for="input-drop-off-time"><div id="s-block4-select-label-text">Drop Off Time:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-drop-off-time">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
-                </div>
-                <div class="select-category">
-                  <label for="input-category"><div id="s-block4-select-label-text">Category:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-category">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
-                </div>
-                <div class="select-transmission">
-                  <label for="input-transmission"><div id="s-block4-select-label-text">Transmission:</div></label>
-                  <div class="custom-select" width="20%">
-                  <select id="input-transmission">
-                    <option>Select</option>
-                    <option>Colombo</option>
-                    <option>Katunayaka</option>
-                    <option>Kandy</option>
-                    <option>Negombo</option>
-                    <option>Ella</option>
-                    <option>Galle</option>
-                    <option>Mattala</option>
-                    <option>Mattala</option>
-                    <option>Nuwaraeliya</option>
-                    <option>Matale</option>
-                  </select>
-                </div>
+                <h1>Reservations</h1>
+                <div class="horizontal-menu">
+                    <ul>
+                        <li><a href="#ssd"><img class="img-btns" src="./imgs/vacations-yellow.png" onclick="img_click(1)"></a></li>
+                        <li><a href="#ssd"><img class="img-btns" src="./imgs/tours-green.png" onclick="img_click(2)"> </a></li>
+                        <li><a href="#ssd"><img class="img-btns" src="./imgs/hotels-green.png" onclick="img_click(3)"></a></li>
+                        <li><a href="#ssd"><img class="img-btns" src="./imgs/cars-green.png" onclick="img_click(4)"></a></li>
+                      
+                    </ul>
                 </div>
 
+                <div class="s-blocks-container">
+                    <div class="s-block1" id="s-block1">
+                        <div style="text-align: center; font-size: 24px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">
+                            Choose your type of vacation:
+                        </div>
 
-                <div class="s-block4-btn"><div id="tx">SUBMIT</div></div>
-               
-                
-              
-              
-              
-              </div>
-            </div>
+                        <div class="checkboxes">
+                            <ul>
+                                <li><input type="checkbox" name="trip-type" id="Culture" value="Culture"><label for="Culture">Culture</label></li>
+                                <li><input type="checkbox" name="trip-type" id="Nature" value="Nature"><label id="N" for="Nature">Nature</label></li>
+                                <li><input type="checkbox" name="trip-type" id="Beach" value="Beach"><label id="B" for="Beach">Beach</label></li>
+                            </ul>
 
+                            <ul>
+                              <li><input type="checkbox" name="trip-type" id="Classes" value="Classes"><label id="C1" for="Classes">Classes</label></li>
+                              <li><input type="checkbox" name="trip-type" id="Religion" value="Religion"><label id="R" for="Religion">Religion</label></li>
+                              <li><input type="checkbox" name="trip-type" id="Events" value="Events"><label id="E" for="Events">Events</label></li>
+                            </ul>
+                        </div>
+                        <div class="s-block1-btn">
+                            <div id="tx">
+                                SEARCH
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s-block2" id="s-block2">
+                        <div style="text-align: center; font-size: 24px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">Choose your type of tour:</div>
+                            <div class="checkboxes">
+                                <ul>
+                                    <li><input type="checkbox" name="trip-type" id="History" value="History"><label for="History">History</label></li>
+                                    <li><input type="checkbox" name="trip-type" id="Nature2" value="Nature2"><label id="N" for="Nature2">Nature</label></li>
+                                    <li><input type="checkbox" name="trip-type" id="Classes2" value="Classes2"><label id="B" for="Classes2">Classes</label></li>
+                                </ul>
+                                <ul>
+                                    <li><input type="checkbox" name="trip-type" id="Sports" value="Sports"><label id="C1" for="Sports">Sports</label></li>
+                                    <li><input type="checkbox" name="trip-type" id="Culinary" value="Culinary"><label id="R2" for="Culinary">Culinary</label></li>
+                                    <li><input type="checkbox" name="trip-type" id="Cultural" value="Cultural"><label id="E2" for="Cultural">Cultural</label></li>
+                                </ul>
+                                <ul>
+                                    <li><input type="checkbox" name="trip-type" id="Nightlife" value="Nightlife"><label id="C1" for="Nightlife">Nightlife</label></li>
+                                </ul>
+                            </div>
+
+                            <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif; margin-top: 15px; margin-bottom: -5px;">
+                                Departure City:
+                            </div>
+
+                            <select>
+                                <option>Colombo</option>
+                                <option>Katunayaka</option>
+                                <option>Mattala</option>
+                            </select>
+
+                            <div class="s-block2-btn">
+                                <div id="tx">
+                                    SEARCH
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="s-block3" id="s-block3">
+                        <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 80%; color: grey; font-family: 'Helvetica Neue', sans-serif;">
+                            City:
+                        </div>
+
+                        <select>
+                            <option>Select</option>
+                            <option>Colombo</option>
+                            <option>Katunayaka</option>
+                            <option>Kandy</option>
+                            <option>Negombo</option>
+                            <option>Ella</option>
+                            <option>Galle</option>
+                            <option>Mattala</option>
+                            <option>Mattala</option>
+                            <option>Nuwaraeliya</option>
+                            <option>Matale</option>
+                        </select>
+
+                      <div style="text-align: center; font-size: 22px; font-weight: 10; opacity: 85%; color: grey; font-family: 'Helvetica Neue', sans-serif;">
+                          Stars:
+                      </div>
+
+                      <ul>
+                          <li><i class="S fa-solid fa-star" id="star1" onclick="Star_click(1)"></i></li>
+                          <li><i class="S fa-solid fa-star" id="star2" onclick="Star_click(2)"></i></li>
+                          <li><i class="S fa-solid fa-star" id="star3" onclick="Star_click(3)"></i></li>
+                          <li><i class="S fa-solid fa-star" id="star4" onclick="Star_click(4)"></i></li>
+                          <li><i class="S fa-regular fa-star" style="color: black;" id="star5" onclick="Star_click(5)"></i></li>
+                      </ul>
+
+                      <div class="s-block3-btn">
+                          <div id="tx">
+                              SEARCH
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="s-block4" id="s-block4"> 
+                        <div class="select-pick-up-city">
+                            <label for="input-pick-up-city">
+                                <div id="s-block4-select-label-text">
+                                    Pick Up City:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-pick-up-city">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-drop-off-city">
+                            <label for="input-drop-off-city">
+                                <div id="s-block4-select-label-text">
+                                    Drop off City:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-drop-off-city">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-pick-up-date">
+                            <label for="select-pick-up-date">
+                                <div id="s-block4-select-label-text">
+                                    Pick up Date:
+                                </div>
+                            </label>
+
+                            <input type="date">
+                        </div>
+
+                        <div class="select-drop-off-date">
+                            <label for="select-drop-off-date">
+                                <div id="s-block4-select-label-text">
+                                    Drop Off Date:
+                                </div>
+                            </label>
+
+                            <input type="date">
+                        </div>
+
+                        <div class="select-pick-up-time">
+                            <label for="input-pick-up-time">
+                                <div id="s-block4-select-label-text">
+                                    Pick Up Time:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-pick-up-time">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-drop-off-time">
+                            <label for="input-drop-off-time">
+                                <div id="s-block4-select-label-text">
+                                    Drop Off Time:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-drop-off-time">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-category">
+                            <label for="input-category">
+                                <div id="s-block4-select-label-text">
+                                    Category:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-category">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-transmission">
+                            <label for="input-transmission">
+                                <div id="s-block4-select-label-text">
+                                    Transmission:
+                                </div>
+                            </label>
+
+                            <div class="custom-select" width="20%">
+                                <select id="input-transmission">
+                                    <option>Select</option>
+                                    <option>Colombo</option>
+                                    <option>Katunayaka</option>
+                                    <option>Kandy</option>
+                                    <option>Negombo</option>
+                                    <option>Ella</option>
+                                    <option>Galle</option>
+                                    <option>Mattala</option>
+                                    <option>Mattala</option>
+                                    <option>Nuwaraeliya</option>
+                                    <option>Matale</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="s-block4-btn">
+                            <div id="tx">
+                                SUBMIT
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <div class="trip-block-1">
-              <div></div>
-              <div class="right-block">
-                <div id="title">Trip to the World's End</div>
-                <p>While enjoying your journey in the mountain country side visit the world famous world's end to treat yourself with adventure, wonder, exitement and pure beauty of the nature. This is where the clouds will touch your heart and the ground at the same time and will combine two districts all together from a single place. You will stop at various natural wonders on your way to the top of the mountain. You will also have time to hike, explore subterranean caves, and appreciate some of the oldest geological formations of Sri Lanka.</p>
-                <div id="btn">LEARN MORE > </div>
-              </div>
-              <img src="./imgs/w2.jpg">
+                <div>
+
+                </div>
+
+                <div class="right-block">
+                    <div id="title">
+                        Trip to the World's End
+                    </div>
+
+                    <p>
+                        While enjoying your journey in the mountain country side visit the world famous world's end to treat yourself with adventure, wonder, exitement and pure beauty of the nature. This is where the clouds will touch your heart and the ground at the same time and will combine two districts all together from a single place. You will stop at various natural wonders on your way to the top of the mountain. You will also have time to hike, explore subterranean caves, and appreciate some of the oldest geological formations of Sri Lanka.
+                    </p>
+
+                    <div id="btn">
+                        LEARN MORE &gt;
+                    </div>
+                </div>
+
+                <img src="./imgs/w2.jpg">
             </div>
+
             <div class="trip-block-2">
-              <div></div>
-              <div class="right-block">
-                <div id="title">Trip to the Ella Rock</div>
-                <p>Escape into the puffy clouds, through the natural elegance of the magneficient miracle of a mountain. Have an adeventurous day hiking up the Ella rock while embracing the wonderful and ever changing scenary down and around your own eyes. And get ready to treat yourself with a fascinating mountain-top scenary which will capture your heart in a second.</p>
-                <div id="btn">LEARN MORE > </div>
-              </div>
-              <img src="./imgs/e2.jpg">
+                <div>
+
+                </div>
+
+                <div class="right-block">
+                    <div id="title">
+                        Trip to the Ella Rock
+                    </div>
+
+                    <p>
+                        Escape into the puffy clouds, through the natural elegance of the magneficient miracle of a mountain. Have an adeventurous day hiking up the Ella rock while embracing the wonderful and ever changing scenary down and around your own eyes. And get ready to treat yourself with a fascinating mountain-top scenary which will capture your heart in a second.
+                    </p>
+
+                    <div id="btn">
+                        LEARN MORE &gt;
+                    </div>
+                </div>
+
+                <img src="./imgs/e2.jpg">
             </div>
 
             <div class="ask-a-block">
-              <div id="title">ASK A SRI LANKAN</div>
-              <hr id="line1">
-              <i class="S fa-solid fa-star"></i>
-              <hr id="line2">
-              <div id="text"><p>Everything you want to know about Sri Lanka! Our local travel specialists answer one of your questions every week  <a href="#dfgfe">LEARN MORE ›</a></p></div>
+                <div id="title">
+                    ASK A SRI LANKAN
+                </div>
+
+                <hr id="line1">
+
+                <i class="S fa-solid fa-star"></i>
+
+                <hr id="line2">
+
+                <div id="text">
+                    <p>
+                        Everything you want to know about Sri Lanka! Our local travel specialists answer one of your questions every week  
+                        <a href="#dfgfe">
+                            LEARN MORE &gt;
+                        </a>
+                    </p>
+                </div>
             </div>
 
             <div id="what-do-we-offer-block">
-              <img src="./imgs/what-do-we-offer.png">
+                <img src="./imgs/what-do-we-offer.png">
             </div>
 
             <div class="why-us">
-              <div id="right-side-block"> 
-                <h1>Why Us?</h1>
-            <p>We're a team of over 40 experienced travel agents and sales agents based in Cuba, providing personalized services to groups, corporate companies, and individual travelers from all over the world since 2002. We love our country, and we want the world to experience it and get to know it the way we do.<br><br>
-              Nothing makes us happier than seeing our customers smile, hearing what a great experience they had in Cuba. We look forward to being your local host agency.</p>
-              <div id="why-us-btn">LEARN MORE ></div>
-            </div>
-                
-                  <img src="./imgs/whyUs.png">
-            </div>
+                <div id="right-side-block"> 
+                    <h1>Why Us?</h1>
 
-            <div class="footer">
+                    <p>
+                        We're a team of over 40 experienced travel agents and sales agents based in Cuba, providing personalized services to groups, corporate companies, and individual travelers from all over the world since 2002. We love our country, and we want the world to experience it and get to know it the way we do.
+                        <br>
+                        <br>
+                        Nothing makes us happier than seeing our customers smile, hearing what a great experience they had in Cuba. We look forward to being your local host agency.
+                    </p>
+
+                    <div id="why-us-btn">
+                        LEARN MORE &gt;
+                    </div>
+                </div>
+                
+                <img src="./imgs/whyUs.png">
+            </div>
+        </div>
+        
+        <footer>
+          <div class="footer">
             <div class="footer-top">
-               <img src="./imgs/slIconBGColored.jpg">
-               <div id="subscribe">SUBSCRIBE</div>
-               <div id="signUp">sign up to recieve new and offers:</div>
-               <input type="text" placeholder="enter e-mail address"> <div class="footer-btn"><div id="tx">SIGN ME UP></div></div>
-               <div id="respect-privacy">We respect your privacy</div>
+                  <img src="./imgs/slIconBGColored.jpg">
+                  <div id="subscribe">
+                      SUBSCRIBE
+                  </div>
+                  <div id="signUp">
+                      sign up to recieve new and offers:
+                  </div>
+                  <input type="text" placeholder="enter e-mail address"> 
+                  <div class="footer-btn">
+                      <div id="tx">
+                          SIGN ME UP
+                      </div>
+                  </div>
+                  <div id="respect-privacy">
+                      We respect your privacy
+                  </div>
             </div>
             <div class="footer-bottom">
-              <ul>
-                <li><a href="#sdsd">LEGAL TERMS</a>&nbsp;|</li>
-                <li><a href="#sdsd">PRIVACY TERMS</a>&nbsp;|</li>
-                <li><a href="#sdsd">PAYMENT INFORMATION</a>&nbsp;|</li>
-                <li><a href="#sdsd">ABOUT US</a>&nbsp;</li>
-              </ul>
-              <div id="follow-us">FOLLOW US AT:</div>
-              <ul id="social-media-block">
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-pinterest"></i></li>
-              </ul>
+                <ul>
+                    <li><a href="#sdsd">LEGAL TERMS</a>&nbsp;|</li>
+                    <li><a href="#sdsd">PRIVACY TERMS</a>&nbsp;|</li>
+                    <li><a href="#sdsd">PAYMENT INFORMATION</a>&nbsp;|</li>
+                    <li><a href="#sdsd">ABOUT US</a>&nbsp;</li>
+                </ul>
 
-              <div class="contactInfo">Tels: (94) 7204 7428 | (94) 7204 7429<br><div id="email">reservations@knowingSriLanka.com</div><div id="website"><b>www.knowingSriLanka.com</b></div></div>
+                <div id="follow-us">
+                    FOLLOW US AT:
+                </div>
+
+                <ul id="social-media-block">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest"></i></li>
+                </ul>
+
+                <div class="contactInfo">
+                    Tels: (94) 7204 7428 | (94) 7204 7429
+                    <br>
+
+                    <div id="email">
+                        reservations@knowingSriLanka.com
+                    </div>
+
+                    <div id="website">
+                        <b>www.knowingSriLanka.com</b>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+        </footer>
 
-            <script src="script.js"></script>
-            <script src="https://kit.fontawesome.com/17e14d1ce5.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/17e14d1ce5.js" crossorigin="anonymous"></script>
     </body>
 </html>
