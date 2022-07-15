@@ -1,0 +1,276 @@
+/* NOTE : Site is designed for mobile and changed accordingly using media queries */
+
+/* ===========================================================================
+0. root
+   ============================================================================ */
+   :root {
+    --clr-primary: hsl(180, 54%, 48%);
+    --clr-secondary: hsl(221, 35%, 62%);
+  
+    /* --clr-accent: hsl(50, 100%, 49%); */
+    --clr-accent: hsl(11, 96%, 55%);
+    --clr-neutral: white;
+  
+    --ff-primary: 'Open Sans', sans-serif;
+    --fs-300: 0.75rem;  /* 12px */
+    --fs-400: 0.875rem; /* 14px */
+    --fs-450: 1rem;
+    --fs-500: 1.75rem;  /* 28px */
+    --fs-600: 2.5rem;
+    
+  }
+  body {
+    background-color:white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* ===================================================================
+  1. CSS Reset
+     ==================================================================== */
+  
+  /* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;   /* padding and border are included in the width and height */
+  }
+  
+  /* Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;    /* removes all the font weights and sizes from headings as well */
+  }
+  
+  ul.no-list, 
+  ol.no-list {
+      list-style: none;
+  }
+  
+  html,
+  body {
+      height: 100%;
+  }
+  /* Set core body defaults */
+  body {
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+    }
+  
+    /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+
+/* ===================================================================
+  3. Styling header
+   ==================================================================== */
+.material-symbols-outlined { vertical-align: bottom;}
+div.tog-lbl-container {
+    padding: 0 25px;
+}
+div.tog-lbl {
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+img.logo {
+    height: 90%;
+}
+
+label.tog-lbl {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.tog-check { display: none; }
+
+.tog-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: max-height, opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+  
+.tog-check:checked + .tog-content {
+    max-height: 400vh; /* any insanely large number if a lot of contents - otherwise it will cut out some */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* a {
+    text-decoration: none;
+    color: var(--clr-secondary);
+} */
+
+ul.nav-bar-links {
+    list-style-type: none;
+}
+ul.nav-bar-links > li {
+    /* background-color: yellowgreen; */
+    font-weight: 600;
+    color: var(--clr-secondary);
+    display: inline-block;
+    width: 100%;
+    padding: 10px 8px;
+    border-top: 1px solid var(--clr-secondary);
+}
+ul.nav-bar-links > li:last-child { border-bottom: 1px solid var(--clr-secondary); }
+
+ul.nav-bar-links > li > a {
+    display: inline-block;
+    padding: 10px 8px;
+    width: 100%;
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+.nav-bar-links > li > a:hover{
+    font-weight: bold;
+    color: red;
+}
+
+div.search-bar-container {
+    width: 100%;
+    padding: 40px 0;
+}
+div.search-bar {
+    position: relative;
+}
+input.search-bar {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color: var(--clr-secondary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 3px;
+}
+button.search-bar {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    width: 20px;
+    height: 28px;
+    border: 0;
+    color: var(--clr-primary);
+    background: none;
+}
+button.search-bar:hover {
+    cursor: pointer;
+    color: var(--clr-accent);
+}
+
+div.inline { display: inline; }
+
+div.contact-us {
+    padding: 0 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-400);
+}
+div.contact-us > a{
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+div.contact-us > a:hover{
+    color: var(--clr-accent);
+}
+
+.active-page {
+    color: hsl(180, 54%, 60%) !important;
+}
+
+div.slideshow-top-bar {
+    width: 100%;
+    background-color: hsl(180, 54%, 60%);
+    padding: 4px;
+    font-weight: 600;
+    font-size: var(--fs-400);
+    text-align: center;
+    color: var(--clr-neutral);
+}
+/* ===================================================================
+  4. Styling footer
+   ==================================================================== */
+
+
+
+/* ===================================================================
+  x. Media Queries
+   ==================================================================== */
+@media screen and (min-width: 1000px) {
+    label.tog-lbl {
+        display: none;
+    }
+    div.tog-lbl {
+        position: relative;
+        height: 130px;
+        background-color: white;
+    }
+    .tog-content {
+        /* width: fit-content; */
+        padding: 0 30px;    
+        width: calc(100vw - (160px + 50px + 20px)); /* screen.width - (img.width + 2xPadding + Offset)*/
+        visibility: visible;
+        max-height: 100vh;
+        opacity: 1;
+        position: absolute;
+        top: 60px;
+        left: calc(160px + 25px);   /* img.width + 1xPadding */
+    }
+    ul.nav-bar-links {
+        width: fit-content;
+    }
+    ul.nav-bar-links > li {
+        /* background-color: yellowgreen; */
+        font-weight: 600;
+        font-size: var(--fs-450);
+        color: var(--clr-secondary);
+        display: inline;
+        /* width: 100%; */
+        padding: 10px 8px;
+        border: none;
+    }
+    ul.nav-bar-links > li:last-child { border-bottom: none; }
+    ul.nav-bar-links > li > a {
+        display: inline;
+    }
+
+    div.search-bar-container {
+        padding: 0 0;
+        width: 200px;
+        position: absolute;
+        right: 20px;
+        top: -5px;
+    }
+    div.contact-us {
+        width: fit-content;
+        position: absolute;
+        top: -50px;
+        right: 20px;
+        padding: 0;
+    }
+    div.slideshow-top-bar {
+        padding: 8px;
+    }
+}
+
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48
+}
