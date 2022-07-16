@@ -71,29 +71,29 @@
   3. Styling header
    ==================================================================== */
 .material-symbols-outlined { vertical-align: bottom;}
-div.tog-lbl-container {
+div.header-tog-lbl-container {
     padding: 0 25px;
 }
-div.tog-lbl {
+div.header-tog-lbl {
     position: relative;
     height: 72px;
     display: flex;
     align-items: center;
     width: 100%;
 }
-img.logo {
+img.header-logo {
     height: 90%;
 }
 
-label.tog-lbl {
+label.header-tog-lbl {
     position: absolute;
     right: 0;
     cursor: pointer;
 }
 
-.tog-check { display: none; }
+.header-tog-check { display: none; }
 
-.tog-content {
+.header-tog-content {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -102,7 +102,7 @@ label.tog-lbl {
     transition-timing-function: ease-in-out;
 }
   
-.tog-check:checked + .tog-content {
+.header-tog-check:checked + .header-tog-content {
     max-height: 400vh; /* any insanely large number if a lot of contents - otherwise it will cut out some */
     opacity: 1;
     visibility: visible;
@@ -113,10 +113,10 @@ label.tog-lbl {
     color: var(--clr-secondary);
 } */
 
-ul.nav-bar-links {
+ul.header-nav-bar-links {
     list-style-type: none;
 }
-ul.nav-bar-links > li {
+ul.header-nav-bar-links > li {
     /* background-color: yellowgreen; */
     font-weight: 600;
     color: var(--clr-secondary);
@@ -125,28 +125,29 @@ ul.nav-bar-links > li {
     padding: 10px 8px;
     border-top: 1px solid var(--clr-secondary);
 }
-ul.nav-bar-links > li:last-child { border-bottom: 1px solid var(--clr-secondary); }
+ul.header-nav-bar-links > li:last-child { border-bottom: 1px solid var(--clr-secondary); }
 
-ul.nav-bar-links > li > a {
+ul.header-nav-bar-links > li > a {
     display: inline-block;
     padding: 10px 8px;
     width: 100%;
     text-decoration: none;
+    text-transform: uppercase;
     color: var(--clr-secondary);
 }
-.nav-bar-links > li > a:hover{
+.header-nav-bar-links > li > a:hover{
     font-weight: bold;
-    color: red;
+    color: var(--clr-accent);
 }
 
-div.search-bar-container {
+div.header-search-bar-container {
     width: 100%;
     padding: 40px 0;
 }
-div.search-bar {
+div.header-search-bar {
     position: relative;
 }
-input.search-bar {
+input.header-search-bar {
     width: 100%;
     height: 35px;
     font-size: 14px;
@@ -155,7 +156,7 @@ input.search-bar {
     border: 1px solid var(--clr-primary);
     border-radius: 3px;
 }
-button.search-bar {
+button.header-search-bar {
     position: absolute;
     right: 5px;
     top: 4px;
@@ -165,25 +166,25 @@ button.search-bar {
     color: var(--clr-primary);
     background: none;
 }
-button.search-bar:hover {
+button.header-search-bar:hover {
     cursor: pointer;
     color: var(--clr-accent);
 }
 
-div.inline { display: inline; }
+div.header-inline { display: inline; }
 
-div.contact-us {
+div.header-contact-us {
     padding: 0 0 40px;
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: var(--fs-400);
 }
-div.contact-us > a{
+div.header-contact-us > a{
     text-decoration: none;
     color: var(--clr-secondary);
 }
-div.contact-us > a:hover{
+div.header-contact-us > a:hover{
     color: var(--clr-accent);
 }
 
@@ -203,7 +204,7 @@ div.slideshow-top-bar {
 /* ===================================================================
   4. Styling footer
    ==================================================================== */
-input.signup-btn {
+input.footer-signup-btn {
     width: 120px;
     border: 2px solid var(--clr-accent);
     border-radius: 100px;
@@ -217,8 +218,8 @@ input.signup-btn {
     transition-duration: 0.05s;
     transition-timing-function: linear;
 }
-input.signup-btn:hover,
-input.signup-btn:focus {
+input.footer-signup-btn:hover,
+input.footer-signup-btn:focus {
     cursor: pointer;
     border-color: var(--clr-accent);
     color: var(--clr-accent);
@@ -239,14 +240,14 @@ div.footer-img {
 img.footer-img {
     height: 75px;
 }
-#subscribe {
+#footer-subscribe {
     color: var(--clr-neutral);
     font-weight: 600;
     font-size: 18px;
     letter-spacing: 3px;
     padding-bottom: 10px;
 }
-#signup {
+#footer-signup {
     letter-spacing: 1.5px;
     font-size: 14px;
     color: var(--clr-neutral);
@@ -266,7 +267,7 @@ input.footer-txt {
 div.footer-btn {
     padding-bottom: 10px;
 }
-#respect-privacy {
+#footer-respect-privacy {
     color: var(--clr-neutral);
     font-size: 14px;
     letter-spacing: 1.5px;
@@ -277,10 +278,10 @@ div.footer-top-section {
 
 
 /* footer bottom */
-div.privacy-links-block {
+div.footer-privacy-links-block {
     padding: 15px 0;
 }
-div.privacy-links-block > ul {
+div.footer-privacy-links-block > ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -289,28 +290,28 @@ div.privacy-links-block > ul {
     list-style-type: none;
 }
 
-div.privacy-links-block > ul > li {
+div.footer-privacy-links-block > ul > li {
     padding: 0 10px;  
 }
-div.privacy-links-block > ul > li::after {
+div.footer-privacy-links-block > ul > li::after {
     content: "|";
     color:#4ac6c6;
     padding-left: 15px;
 }
-div.privacy-links-block > ul > li:last-child:after {
+div.footer-privacy-links-block > ul > li:last-child:after {
     content: "";
 }
-div.privacy-links-block > ul > li > a { 
+div.footer-privacy-links-block > ul > li > a { 
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1.5px;
     color: #4ac6c6;
 }
-div.privacy-links-block > ul > li > a:hover {
+div.footer-privacy-links-block > ul > li > a:hover {
     color: var(--clr-accent);
 }
 
-div.social-media-block {
+div.footer-social-media-block {
     padding: 20px;
     color: #4ac6c6;
     width: 100%;
@@ -318,10 +319,10 @@ div.social-media-block {
     flex-direction: column;
     align-items: center;
 }
-ul#social-media-block {
+ul#footer-social-media-block {
     list-style-type: none;
 }
-ul#social-media-block > li {
+ul#footer-social-media-block > li {
     display: inline-block;
     padding: 15px;
 }
@@ -332,7 +333,7 @@ ul#social-media-block > li {
 .fa-brands:hover {
     color: var(--clr-accent);
 }
-div.contactInfo {
+div.footer-contactInfo {
     padding: 0 0 30px;
     color: #4ac6c6;
     width: 100%;
@@ -343,33 +344,47 @@ div.contactInfo {
     font-weight: 600;
     letter-spacing: 1px;
 }
-div.contactInfo > div {
+div.footer-contactInfo > div {
     padding: 2px;
 }
-a.no-style-link {
+a.footer-no-style-link {
     text-decoration: none;
     color: inherit;
 }
-div.contactInfo b {
+div.footer-contactInfo b {
     font-weight: 900;
     font-size: var(--fs-450);
 }
-div.contactInfo a:hover {
+div.footer-contactInfo a:hover {
     color: var(--clr-accent);
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--clr-secondary);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--clr-secondary);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--clr-secondary);
+  }
 /* ===================================================================
   x. Media Queries
    ==================================================================== */
 @media screen and (min-width: 1000px) {
-    label.tog-lbl {
+    label.header-tog-lbl {
         display: none;
     }
-    div.tog-lbl {
+    div.header-tog-lbl {
         position: relative;
         height: 130px;
         background-color: white;
     }
-    .tog-content {
+    .header-tog-content {
         /* width: fit-content; */
         padding: 0 30px;    
         width: calc(100vw - (160px + 50px + 20px)); /* screen.width - (img.width + 2xPadding + Offset)*/
@@ -380,10 +395,10 @@ div.contactInfo a:hover {
         top: 60px;
         left: calc(160px + 25px);   /* img.width + 1xPadding */
     }
-    ul.nav-bar-links {
+    ul.header-nav-bar-links {
         width: fit-content;
     }
-    ul.nav-bar-links > li {
+    ul.header-nav-bar-links > li {
         /* background-color: yellowgreen; */
         font-weight: 600;
         font-size: var(--fs-450);
@@ -393,19 +408,19 @@ div.contactInfo a:hover {
         padding: 10px 8px;
         border: none;
     }
-    ul.nav-bar-links > li:last-child { border-bottom: none; }
-    ul.nav-bar-links > li > a {
+    ul.header-nav-bar-links > li:last-child { border-bottom: none; }
+    ul.header-nav-bar-links > li > a {
         display: inline;
     }
 
-    div.search-bar-container {
+    div.header-search-bar-container {
         padding: 0 0;
         width: 200px;
         position: absolute;
         right: 20px;
         top: -5px;
     }
-    div.contact-us {
+    div.header-contact-us {
         width: fit-content;
         position: absolute;
         top: -50px;
@@ -416,7 +431,21 @@ div.contactInfo a:hover {
         padding: 8px;
     }
 }
-
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    .header-tog-content {
+        top: 85px;
+    }
+    div.header-search-bar-container {
+        padding: 0 0;
+        width: 400px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -60px;
+        transform: translateX(calc(-120px + 10%));   /* offset */
+    }
+}
 
 .material-symbols-outlined {
 font-variation-settings:
