@@ -1,0 +1,456 @@
+/* NOTE : Site is designed for mobile and changed accordingly using media queries */
+
+/* ===========================================================================
+0. root
+   ============================================================================ */
+   :root {
+    --clr-primary: hsl(180, 54%, 48%);
+    --clr-secondary: hsl(221, 35%, 62%);
+  
+    /* --clr-accent: hsl(50, 100%, 49%); */
+    --clr-accent: hsl(11, 96%, 55%);
+    --clr-neutral: white;
+  
+    --ff-primary: 'Open Sans', sans-serif;
+    --fs-300: 0.75rem;  /* 12px */
+    --fs-400: 0.875rem; /* 14px */
+    --fs-450: 1rem;
+    --fs-500: 1.75rem;  /* 28px */
+    --fs-600: 2.5rem;
+    
+  }
+  body {
+    background-color:white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* ===================================================================
+  1. CSS Reset
+     ==================================================================== */
+  
+  /* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;   /* padding and border are included in the width and height */
+  }
+  
+  /* Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;    /* removes all the font weights and sizes from headings as well */
+  }
+  
+  ul.no-list, 
+  ol.no-list {
+      list-style: none;
+  }
+  
+  html,
+  body {
+      height: 100%;
+  }
+  /* Set core body defaults */
+  body {
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+    }
+  
+    /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+
+/* ===================================================================
+  3. Styling header
+   ==================================================================== */
+.material-symbols-outlined { vertical-align: bottom;}
+div.header-tog-lbl-container {
+    padding: 0 25px;
+}
+div.header-tog-lbl {
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+img.header-logo {
+    height: 90%;
+}
+
+label.header-tog-lbl {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.header-tog-check { display: none; }
+
+.header-tog-content {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: max-height, opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+  
+.header-tog-check:checked + .header-tog-content {
+    max-height: 400vh; /* any insanely large number if a lot of contents - otherwise it will cut out some */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* a {
+    text-decoration: none;
+    color: var(--clr-secondary);
+} */
+
+ul.header-nav-bar-links {
+    list-style-type: none;
+}
+ul.header-nav-bar-links > li {
+    /* background-color: yellowgreen; */
+    font-weight: 600;
+    color: var(--clr-secondary);
+    display: inline-block;
+    width: 100%;
+    padding: 10px 8px;
+    border-top: 1px solid var(--clr-secondary);
+}
+ul.header-nav-bar-links > li:last-child { border-bottom: 1px solid var(--clr-secondary); }
+
+ul.header-nav-bar-links > li > a {
+    display: inline-block;
+    padding: 10px 8px;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-secondary);
+}
+.header-nav-bar-links > li > a:hover{
+    font-weight: bold;
+    color: var(--clr-accent);
+}
+
+div.header-search-bar-container {
+    width: 100%;
+    padding: 40px 0;
+}
+div.header-search-bar {
+    position: relative;
+}
+input.header-search-bar {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color: var(--clr-secondary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 3px;
+}
+button.header-search-bar {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+    height: 28px;
+    border: 0;
+    color: var(--clr-primary);
+    background: none;
+}
+button.header-search-bar:hover {
+    cursor: pointer;
+    color: var(--clr-accent);
+}
+
+div.header-inline { display: inline; }
+
+div.header-contact-us {
+    padding: 0 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-400);
+}
+div.header-contact-us > a{
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+div.header-contact-us > a:hover{
+    color: var(--clr-accent);
+}
+
+.active-page {
+    color: hsl(180, 54%, 60%) !important;
+}
+
+div.slideshow-top-bar {
+    width: 100%;
+    background-color: hsl(180, 54%, 60%);
+    padding: 4px;
+    font-weight: 600;
+    font-size: var(--fs-400);
+    text-align: center;
+    color: var(--clr-neutral);
+}
+/* ===================================================================
+  4. Styling footer
+   ==================================================================== */
+input.footer-signup-btn {
+    width: 120px;
+    border: 2px solid var(--clr-accent);
+    border-radius: 100px;
+    padding: 5px;
+    background-color: var(--clr-accent);
+    color: var(--clr-neutral);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+
+    transition-property: background-color, border, color;
+    transition-duration: 0.05s;
+    transition-timing-function: linear;
+}
+input.footer-signup-btn:hover,
+input.footer-signup-btn:focus {
+    cursor: pointer;
+    border-color: var(--clr-accent);
+    color: var(--clr-accent);
+    background-color: var(--clr-neutral);
+}
+div.footer-top {
+    flex-direction: column;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    height: 320px;
+    width: 100%;
+    background-color: #4ac6c6;
+}
+div.footer-img {
+    padding: 20px;
+}
+img.footer-img {
+    height: 75px;
+}
+#footer-subscribe {
+    color: var(--clr-neutral);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+#footer-signup {
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    color: var(--clr-neutral);
+    padding-bottom: 10px;
+}
+div.footer-txt {
+    width: 90%;
+    max-width: 500px;
+    padding-bottom: 20px;
+}
+input.footer-txt {
+    padding: 6px 12px;
+    width: 100%;
+    height: 34px;
+    border: 1px solid #4ac6c6;
+}
+div.footer-btn {
+    padding-bottom: 10px;
+}
+#footer-respect-privacy {
+    color: var(--clr-neutral);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+div.footer-top-section {
+    display: block;
+}
+
+
+/* footer bottom */
+div.footer-privacy-links-block {
+    padding: 15px 0;
+}
+div.footer-privacy-links-block > ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+div.footer-privacy-links-block > ul > li {
+    padding: 0 10px;  
+}
+div.footer-privacy-links-block > ul > li::after {
+    content: "|";
+    color:#4ac6c6;
+    padding-left: 15px;
+}
+div.footer-privacy-links-block > ul > li:last-child:after {
+    content: "";
+}
+div.footer-privacy-links-block > ul > li > a { 
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #4ac6c6;
+}
+div.footer-privacy-links-block > ul > li > a:hover {
+    color: var(--clr-accent);
+}
+
+div.footer-social-media-block {
+    padding: 20px;
+    color: #4ac6c6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul#footer-social-media-block {
+    list-style-type: none;
+}
+ul#footer-social-media-block > li {
+    display: inline-block;
+    padding: 15px;
+}
+.fa-brands {
+    font-size: 35px;
+    color: #4ac6c6;
+}
+.fa-brands:hover {
+    color: var(--clr-accent);
+}
+div.footer-contactInfo {
+    padding: 0 0 30px;
+    color: #4ac6c6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fs-400);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+div.footer-contactInfo > div {
+    padding: 2px;
+}
+a.footer-no-style-link {
+    text-decoration: none;
+    color: inherit;
+}
+div.footer-contactInfo b {
+    font-weight: 900;
+    font-size: var(--fs-450);
+}
+div.footer-contactInfo a:hover {
+    color: var(--clr-accent);
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--clr-secondary);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--clr-secondary);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--clr-secondary);
+  }
+/* ===================================================================
+  x. Media Queries
+   ==================================================================== */
+@media screen and (min-width: 1000px) {
+    label.header-tog-lbl {
+        display: none;
+    }
+    div.header-tog-lbl {
+        position: relative;
+        height: 130px;
+        background-color: white;
+    }
+    .header-tog-content {
+        /* width: fit-content; */
+        padding: 0 30px;    
+        width: calc(100vw - (160px + 50px + 20px)); /* screen.width - (img.width + 2xPadding + Offset)*/
+        visibility: visible;
+        max-height: 100vh;
+        opacity: 1;
+        position: absolute;
+        top: 60px;
+        left: calc(160px + 25px);   /* img.width + 1xPadding */
+    }
+    ul.header-nav-bar-links {
+        width: fit-content;
+    }
+    ul.header-nav-bar-links > li {
+        /* background-color: yellowgreen; */
+        font-weight: 600;
+        font-size: var(--fs-450);
+        color: var(--clr-secondary);
+        display: inline;
+        /* width: 100%; */
+        padding: 10px 8px;
+        border: none;
+    }
+    ul.header-nav-bar-links > li:last-child { border-bottom: none; }
+    ul.header-nav-bar-links > li > a {
+        display: inline;
+    }
+
+    div.header-search-bar-container {
+        padding: 0 0;
+        width: 200px;
+        position: absolute;
+        right: 20px;
+        top: -5px;
+    }
+    div.header-contact-us {
+        width: fit-content;
+        position: absolute;
+        top: -50px;
+        right: 20px;
+        padding: 0;
+    }
+    div.slideshow-top-bar {
+        padding: 8px;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    .header-tog-content {
+        top: 85px;
+    }
+    div.header-search-bar-container {
+        padding: 0 0;
+        width: 400px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -60px;
+        transform: translateX(calc(-120px + 10%));   /* offset */
+    }
+}
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48
+}
