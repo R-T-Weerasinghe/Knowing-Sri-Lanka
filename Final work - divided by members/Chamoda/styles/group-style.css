@@ -1,0 +1,349 @@
+:root {
+    --clr-primary: hsl(180, 54%, 48%);
+    --clr-secondary: hsl(221, 35%, 62%);
+  
+    /* --clr-accent: hsl(50, 100%, 49%); */
+    --clr-accent: hsl(11, 96%, 55%);
+    --clr-neutral: white;
+  
+    --ff-primary: 'Open Sans', sans-serif;
+    --fs-300: 0.75rem;  /* 12px */
+    --fs-400: 0.875rem; /* 14px */
+    --fs-450: 1rem;     /* 16px */
+    --fs-500: 1.75rem;  /* 28px */
+    --fs-600: 2.5rem;
+    
+}
+
+/* ===================================================================
+1. CSS Reset
+   ==================================================================== */
+
+/* derived from CSS reset by Andy Bell. Link > https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   /* padding and border are included in the width and height */
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;    /* removes all the font weights and sizes from headings as well */
+}
+
+ul.no-list, 
+ol.no-list {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===================================================================
+2. Styling
+   ==================================================================== */
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+    align-items: stretch;
+}
+div.navbar,
+div.footer {
+    height: 20vh;
+    background-color: hsl(199, 100%, 50%);
+}
+div.main-container { 
+    padding: 0 8%;
+}
+
+div.radio-value,
+label.radio-value {
+    display: inline;
+}
+div.radio-value {
+    padding-right: 25px;
+}
+input.radio-value {
+    visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+input.radio-value + label.radio-value::before {   /* select neighbour */
+    content: '';
+    height: 22px;
+    width: 22px;
+    border: 1px solid var(--clr-primary);
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 3px;
+}
+input.radio-value:checked + label.radio-value::before {/* <-- Style its checked state */
+    background: var(--clr-primary);
+    box-shadow: 0 0 0 4px var(--clr-neutral) inset;   /* h v blur spread */
+}
+input.radio-value + label.radio-value:hover {
+    cursor: pointer;
+}
+/* input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+
+}
+
+input[type='radio']:not(:checked) {
+    opacity: 0;
+} */
+
+.sub-header-title {
+    color: var(--clr-primary);
+    font-size: 25px;
+    margin: 10px 0 -5px;
+    text-align: left;
+    font-weight: lighter;
+}
+
+
+.header-title {
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+    font-weight: lighter;
+    letter-spacing: 3px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.topic1 {
+    color: var(--clr-secondary);
+    text-transform: none;
+    font-size: var(--fs-400);
+    margin: 0px 0px 5px;
+    font-weight: bolder;
+}
+
+.form-select {
+    color: var(--clr-secondary);
+    font-size: 14px;
+    background-color: var(--clr-neutral);
+    padding: 6px 12px;
+    border: 1px solid var(--clr-primary);
+    width: fit-content;
+    /* margin: 20px 0px 20px; */
+    /* width: 290px; */
+    width: 100%;
+}
+.form-select:hover {cursor: pointer;}
+
+p {
+    color: var(--clr-secondary);
+    font-size: var(--fs-400);
+    padding: 5px 0;
+}
+
+.lable-form {
+    background: var(--clr-neutral);
+    padding: 6px 12px;
+    margin: 0px 0px 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+}
+
+/* #contact-submit {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #E8C700;
+    padding: 5px 1px;
+    border: 2px solid #E8C700;
+    width: 200;
+    border-radius: 5px;
+} */
+div.btn {
+    display: flex;
+    justify-content: center;
+}
+button.btn {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 120px;
+    height: 40px;
+    border: 2px solid var(--clr-primary);
+    border-radius: 100px;
+    padding: 5px;
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+  
+    transition-property: background-color, border, color;
+    transition-duration: 0.05s;
+    transition-timing-function: linear;
+  }
+  button.btn:hover,
+  button.btn:focus {
+    cursor: pointer;
+    border-color: var(--clr-accent);
+    color: var(--clr-neutral);
+    background-color: var(--clr-accent);
+  }
+
+.form-text {
+    border: 1px solid var(--clr-primary);
+    padding: 6px 12px;
+    background-color: var(--clr-neutral);
+    font-size: var(--fs-400);
+    /* width: 290px; */
+    width: 100%;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+}
+
+/* .all {
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #7C7C7C;
+} */
+
+img.groups-img {
+    width: 100%;
+}
+
+/* .box1 {
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #91d9d8;
+    position: relative;
+    bottom: 45px;
+    left: -3px;
+}
+
+.box2 {
+    z-index: -2;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #91d9d8;
+    position: relative;
+    bottom: 75px;
+    left: 110px;
+} */
+
+#captcha_rule {
+    color: var(--clr-secondary);
+    font-size: 12px;
+}
+
+/* .picture {
+    width: 1700px;
+} */
+
+/* #inputSubject {
+    border: 1px solid #91d9d8;
+    padding: 6px 12px;
+    background-color: #FFFFFF;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */
+label {
+    display: block;
+}
+
+div.form-element {
+    padding: 15px 0;
+}
+
+p > span.material-symbols-outlined {
+    vertical-align: bottom;
+}
+/*  ========================================================
+    media queries
+    ========================================================    */
+
+@media screen and (min-width: 768px) {
+    .container-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    #title,
+    #inputHDHAU,
+    #inputSubject
+    {
+        width: 290px;
+    }
+    input.radio-value + label.radio-value::before {   /* select neighbour */
+        height: 28px;
+        width: 28px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+    }

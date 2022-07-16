@@ -1,12 +1,12 @@
-.carousel{
+/* .carousel{
     width: 400px;
     width: 221px;
     background-position: center;
     background-size: cover;
     background-image: url(imgs/main1.jpg);
-}
+} */
 
-.fade{
+/* .fade{
     -webkit-animation: 1.5s fade;
     animation: 1.5s fade;
 }
@@ -19,7 +19,7 @@
 @keyframes fade{
     from{opacity: 0.4;}
     to{opacity: 1;}
-}
+} */
 
 /* .slide{
     -webkit-animation: 1.5s slide;
@@ -69,7 +69,7 @@
     100% { -webkit-transform: translateX(0%); }
 }
 
-.slide-out {
+/* .slide-out {
     animation: slide-out 0.5s forwards;
     -webkit-animation: slide-out 0.5s forwards;
 }
@@ -81,9 +81,9 @@
 @-webkit-keyframes slide-out {
     0% { -webkit-transform: translateX(0%); }
     100% { -webkit-transform: translateX(-100%); }
-}
+} */
 
-
+/* 
 .moreFade{
     -webkit-animation: 4s moreFade;
     animation: 4s moreFade;
@@ -96,7 +96,7 @@
 @keyframes moreFade{
     from{opacity: 0.4;}
     to{opacity: 1;}
-}
+} */
 
 .slideshow-container {
     width: 100%;
