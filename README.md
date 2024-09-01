@@ -43,10 +43,4 @@ The website acts as a one-stop site for all the tourists' needs.
       <tr>
     <td> <img src="Screenshots/Screenshot 8.png"  alt="2" width = 1700px></td>
    </tr> 
-      <tr>
-    <td> <img src="Screenshots/Screenshot 9.png"  alt="2" width = 1700px></td>
-   </tr> 
-      <tr>
-    <td> <img src="Screenshots/Screenshot 10.png"  alt="2" width = 1700px></td>
-   </tr> 
 </table>
